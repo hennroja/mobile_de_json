@@ -19,8 +19,8 @@ def extract_table_data(url):
     table = soup.find('table')
 
     # Write the table HTML to a file for debugging purposes (optional)
-    # with open('current-table.html', 'w', encoding='utf-8') as f:
-    #     f.write(str(table))
+    with open('current-table.html', 'w', encoding='utf-8') as f:
+        f.write(str(table))
 
     data = []
     for row in table.find_all('tr'):
@@ -31,7 +31,9 @@ def extract_table_data(url):
                 'column': cols[1].text.strip(),
                 'name': cols[2].text.strip(),
                 'required': 'ja' in cols[3].text.strip(),
-                'description': cols[4].text.strip()
+                'description': cols[4].text.strip(),
+                'dataType': determine_data_type(cols[4].text.strip())
+
             })
 
     return data
@@ -75,22 +77,5 @@ def step1_get_latest_state():
         json.dump(data, f, indent=4)
 
 
-def step2_generate_data_types():
-    """Loads the JSON data, adds a "dataType" field for each entry, and saves the updated data."""
-
-    # Load the JSON data
-    with open("mobile_de_csv.json", "r") as f:
-        data = json.load(f)
-
-    # Add "dataType" field to each item in the data
-    for item in data:
-        item["dataType"] = determine_data_type(item["description"])
-
-    # Save the modified JSON data
-    with open("mobile_de_csv_updated.json", "w") as f:
-        json.dump(data, f, indent=4)
-
-
 if __name__ == '__main__':
     step1_get_latest_state()
-    step2_generate_data_types()
