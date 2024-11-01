@@ -1,32 +1,48 @@
 import json
+import re
 
-def generate_postgres_schema(json_file, sql_file):
-    """Generiert ein PostgreSQL-Schema basierend auf einem JSON-Schema.
+def normalize_column_name(name):
+    """Normalizes a column name by replacing special characters and spaces.
+
     Args:
-        json_file (str): Der Pfad zur JSON-Datei.
-        sql_file (str): Der Pfad zur zu erstellenden SQL-Datei.
+        name (str): The original column name.
+
+    Returns:
+        str: The normalized column name.
     """
 
-    with open(json_file, 'r') as f:
+    name = name.replace('ä', 'ae').replace('ö', 'oe').replace('ü', 'ue').replace('ß', 'ss')
+    name = re.sub(r'[()]', '', name)  # Remove brackets from column name
+    return re.sub(r'[^a-zA-Z0-9_]', '_', name).strip('_')
+
+def generate_postgres_schema(json_file, sql_file):
+    """Generates a PostgreSQL schema based on a JSON schema.
+
+    Args:
+        json_file (str): The path to the JSON file.
+        sql_file (str): The path to the output SQL file.
+    """
+
+    with open(json_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    with open(sql_file, 'w') as f:
+    with open(sql_file, 'w', encoding='utf-8') as f:
         f.write("CREATE TABLE vehicles (\n")
 
         for item in data:
-            column_name = item["name"]
+            column_name = normalize_column_name(item["name"])
             data_type = item["dataType"]
 
-            # Mapping von JSON-Datentypen zu PostgreSQL-Datentypen
+            # Mapping of JSON data types to PostgreSQL data types
             postgres_type = {
                 "boolean": "boolean",
                 "date": "date",
                 "float": "numeric",
                 "int": "integer",
                 "string": "text"
-            }.get(data_type, "text")  # Default zu text
+            }.get(data_type, "text")  # Default to text
 
-            # Ignoriere Spalten mit dem Datentyp "null"
+            # Ignore columns with the data type "null"
             if data_type != "null":
                 f.write(f"    {column_name} {postgres_type},\n")
 
