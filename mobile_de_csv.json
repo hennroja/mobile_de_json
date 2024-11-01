@@ -1,0 +1,4419 @@
+[
+    {
+        "Number": 0,
+        "Column": "A",
+        "Name": "kundennummer/filiale",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 30 Zeichen) hier kann sowohl eine Kundennummer als auch ein Standortk\u00fcrzel/StandortID hinterlegt werden"
+    },
+    {
+        "Number": 1,
+        "Column": "B",
+        "Name": "interne_nummer",
+        "Required": true,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 40 Zeichen, identifiziert ein Fahrzeug eindeutig). Erlaubt ist die Verwendung der Zeichen a-z, A-Z, der Ziffern 0-9 und der Sonderzeichen - und _. Alle anderen Zeichen,\r\n          insbesondere alle anderen Sonderzeichen, Umlaute (\u00e4, \u00f6, \u00fc) und \u00df sind nicht erlaubt (siehe Inserate referenzieren (interne Nummer))."
+    },
+    {
+        "Number": 2,
+        "Column": "C",
+        "Name": "kategorie",
+        "Required": true,
+        "Description": "Text (siehe Kategorien, Marken, Modelle)"
+    },
+    {
+        "Number": 3,
+        "Column": "D",
+        "Name": "marke",
+        "Required": true,
+        "Description": "Text (siehe Kategorien, Marken, Modelle)"
+    },
+    {
+        "Number": 4,
+        "Column": "E",
+        "Name": "modell",
+        "Required": true,
+        "Description": "Text (siehe Kategorien, Marken, Modelle)"
+    },
+    {
+        "Number": 5,
+        "Column": "F",
+        "Name": "leistung",
+        "Required": false,
+        "Description": "Ganzzahl, gibt KW-Leistung des Fahrzeugs an"
+    },
+    {
+        "Number": 6,
+        "Column": "G",
+        "Name": "hu",
+        "Required": false,
+        "Description": "Datumsangabe (Format='mm.jjjj'), Hauptuntersuchung"
+    },
+    {
+        "Number": 7,
+        "Column": "H",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 8,
+        "Column": "I",
+        "Name": "ez",
+        "Required": true,
+        "Description": "Datumsangabe (Format='mm.jjjj' oder Format='tt.mm.jjjj'), Erstzulassung"
+    },
+    {
+        "Number": 9,
+        "Column": "J",
+        "Name": "kilometer",
+        "Required": true,
+        "Description": "Ganzzahl ohne Trennzeichen, gefahrene KM. Pflichtfeld bei gebrauchten PKW, Motorr\u00e4dern, LKW bis 7,5t, LKW \u00fcber 7,5t, Sattelzugmaschinen und Bussen."
+    },
+    {
+        "Number": 10,
+        "Column": "K",
+        "Name": "preis",
+        "Required": false,
+        "Description": "Zahl, Brutto- oder Nettopreis 1 4"
+    },
+    {
+        "Number": 11,
+        "Column": "L",
+        "Name": "mwst",
+        "Required": true,
+        "Description": "'0', '1' (0=Mwst ausweisbar, 1=Mwst nicht ausweisbar) 1"
+    },
+    {
+        "Number": 12,
+        "Column": "M",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 13,
+        "Column": "N",
+        "Name": "oldtimer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja) 2"
+    },
+    {
+        "Number": 14,
+        "Column": "O",
+        "Name": "vin",
+        "Required": false,
+        "Description": "Text, Fahrzeug-Identifizierungsnummer (optional nur als Information, wird nicht ausgewertet)"
+    },
+    {
+        "Number": 15,
+        "Column": "P",
+        "Name": "beschaedigtes_fahrzeug",
+        "Required": true,
+        "Description": "'0', '1' (0=nein, 1=ja). Siehe auch Tabelle Besch\u00e4digungen."
+    },
+    {
+        "Number": 16,
+        "Column": "Q",
+        "Name": "farbe",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 32 Zeichen), darf nicht nur aus Ziffern bestehen"
+    },
+    {
+        "Number": 17,
+        "Column": "R",
+        "Name": "klima",
+        "Required": false,
+        "Description": "'0-2' (0=Keine Klimaanlage oder Klimaautomatik, 1=Klimaanlage, 2=Klimaautomatik)"
+    },
+    {
+        "Number": 18,
+        "Column": "S",
+        "Name": "taxi",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 19,
+        "Column": "T",
+        "Name": "behindertengerecht",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 20,
+        "Column": "U",
+        "Name": "jahreswagen",
+        "Required": true,
+        "Description": "'0', '1' (0=nein, 1=ja) 2"
+    },
+    {
+        "Number": 21,
+        "Column": "V",
+        "Name": "neufahrzeug",
+        "Required": true,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 22,
+        "Column": "W",
+        "Name": "unsere empfehlung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 23,
+        "Column": "X",
+        "Name": "haendlerpreis",
+        "Required": false,
+        "Description": "Zahl, Brutto- oder Nettopreis f\u00fcr H\u00e4ndler 1 4"
+    },
+    {
+        "Number": 24,
+        "Column": "Y",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 25,
+        "Column": "Z",
+        "Name": "bemerkung",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 5000 Zeichen). Zugeh\u00f6rige Komma in einem Ausstattungsmerkmal mit \\, maskieren z.B. R\u00fccksitzbank \\, geteilt umlegbar. PR/SA-Nummern mit || vom Ausstattungstext trennen z.B. 06D||HeadUp-Display mit Augmented Reality. Siehe auch\r\n          Formatting Syntax (nur auf Englisch)."
+    },
+    {
+        "Number": 26,
+        "Column": "AA",
+        "Name": "bild_id",
+        "Required": false,
+        "Description": "Text. Zul\u00e4ssige Zeichen sind Zahlen, die Buchstaben A bis Z bzw. a bis z sowie Leerzeichen und Bindestrich. Unterstrich ist m\u00f6glich, aber nicht empfohlen. Alle anderen Zeichen, insbesondere alle anderen Sonderzeichen, Umlaute (\u00e4,\u00f6,\u00fc) und \u00df sind nicht erlaubt.\r\n          Die Bild-ID dient der \u00dcbermittlung der Information, welches Bild welchem Fahrzeug zugeordnet wird. Wird eine Bild-ID im Feld bild_id\u00a0(26/AA)\r\n          \u00fcbertragen, so hat diese Information Priorit\u00e4t \u00fcber das Feld\r\n          interne_nummer\u00a0(1/B). Die Benennungslogik f\u00fcr die Bilderdateien ist [bild_id]_1.jpg (oder [bild_id]_01.jpg), ... , [bild_id]_15.jpg. Wird das Feld leer geliefert, so wird weiterhin die Bildzuordnung \u00fcber das Feld interne_nummer\u00a0(1/B) gesteuert (siehe\r\n          Bilder referenzieren)."
+    },
+    {
+        "Number": 27,
+        "Column": "AB",
+        "Name": "metallic",
+        "Required": true,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 28,
+        "Column": "AC",
+        "Name": "waehrung",
+        "Required": false,
+        "Description": "Nur noch \" EUR\""
+    },
+    {
+        "Number": 29,
+        "Column": "AD",
+        "Name": "mwstsatz",
+        "Required": false,
+        "Description": "MwSt-Satz. Ganz- oder Flie\u00dfkommazahl. Siehe Referenzdaten f\u00fcr m\u00f6gliche Werte. 1 4"
+    },
+    {
+        "Number": 30,
+        "Column": "AE",
+        "Name": "garantie",
+        "Required": true,
+        "Description": "'0', '1' (0=ohne Garantie, 1=Garantie inkl.)"
+    },
+    {
+        "Number": 31,
+        "Column": "AF",
+        "Name": "leichtmetallfelgen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 32,
+        "Column": "AG",
+        "Name": "esp",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 33,
+        "Column": "AH",
+        "Name": "abs",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 34,
+        "Column": "AI",
+        "Name": "Anh\u00e4ngerkupplung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 35,
+        "Column": "AJ",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 36,
+        "Column": "AK",
+        "Name": "wegfahrsperre",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 37,
+        "Column": "AL",
+        "Name": "navigationssystem",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 38,
+        "Column": "AM",
+        "Name": "schiebedach",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 39,
+        "Column": "AN",
+        "Name": "zentralverriegelung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 40,
+        "Column": "AO",
+        "Name": "fensterheber",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 41,
+        "Column": "AP",
+        "Name": "allradantrieb",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 42,
+        "Column": "AQ",
+        "Name": "tueren",
+        "Required": false,
+        "Description": "Ganzzahl, Anzahl der T\u00fcren des Fahrzeugs"
+    },
+    {
+        "Number": 43,
+        "Column": "AR",
+        "Name": "umweltplakette",
+        "Required": false,
+        "Description": "1=keine Plakette, 2=rot, 3=gelb, 4=gr\u00fcn"
+    },
+    {
+        "Number": 44,
+        "Column": "AS",
+        "Name": "servolenkung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 45,
+        "Column": "AT",
+        "Name": "biodiesel",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), Biodiesel geeignet, nur bei Kraftstoffart Diesel"
+    },
+    {
+        "Number": 46,
+        "Column": "AU",
+        "Name": "scheckheftgepflegt",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 47,
+        "Column": "AV",
+        "Name": "katalysator",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Motorr\u00e4der"
+    },
+    {
+        "Number": 48,
+        "Column": "AW",
+        "Name": "kickstarter",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Motorr\u00e4der"
+    },
+    {
+        "Number": 49,
+        "Column": "AX",
+        "Name": "estarter",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Motorr\u00e4der"
+    },
+    {
+        "Number": 50,
+        "Column": "AY",
+        "Name": "vorfuehrfahrzeug",
+        "Required": true,
+        "Description": "'0', '1' (0=nein, 1=ja) 2"
+    },
+    {
+        "Number": 51,
+        "Column": "AZ",
+        "Name": "antrieb",
+        "Required": false,
+        "Description": "'1-3' (1=Kette, 2=Kardan, 3=Riemen), nur Motorr\u00e4der"
+    },
+    {
+        "Number": 52,
+        "Column": "BA",
+        "Name": "ccm",
+        "Required": false,
+        "Description": "Ganzzahl, gibt den Hubraum des Fahrzeugs an"
+    },
+    {
+        "Number": 53,
+        "Column": "BB",
+        "Name": "tragkraft",
+        "Required": false,
+        "Description": "Ganzzahl in kg, nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 54,
+        "Column": "BC",
+        "Name": "nutzlast",
+        "Required": false,
+        "Description": "Ganzzahl in kg, nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 55,
+        "Column": "BD",
+        "Name": "gesamtgewicht",
+        "Required": false,
+        "Description": "Ganzzahl in kg, nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 56,
+        "Column": "BE",
+        "Name": "hubhoehe",
+        "Required": false,
+        "Description": "Ganzzahl in mm, nur Stapler"
+    },
+    {
+        "Number": 57,
+        "Column": "BF",
+        "Name": "bauhoehe",
+        "Required": false,
+        "Description": "Ganzzahl in mm, nur Stapler"
+    },
+    {
+        "Number": 58,
+        "Column": "BG",
+        "Name": "baujahr",
+        "Required": false,
+        "Description": "Ganzzahl 4-stellig"
+    },
+    {
+        "Number": 59,
+        "Column": "BH",
+        "Name": "betriebsstunden",
+        "Required": false,
+        "Description": "Ganzzahl, nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 60,
+        "Column": "BI",
+        "Name": "sitze",
+        "Required": false,
+        "Description": "Anzahl der Fahrgastsitzpl\u00e4tze - nur Busse, PKW und LKW bis 7,5 t"
+    },
+    {
+        "Number": 61,
+        "Column": "BJ",
+        "Name": "schadstoff",
+        "Required": false,
+        "Description": "'1-7' (1=euro1, 2=euro2, 3=euro3, 4=euro4, 5=euro5, 6=euro6, 7=euro7), Schadstoffklasse"
+    },
+    {
+        "Number": 62,
+        "Column": "BK",
+        "Name": "kabinenart",
+        "Required": false,
+        "Description": "'1-4' (1=Doppelkabine, 2=Liegeplatz, 3=Nahverkehr, 4=Fernverkehr), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 63,
+        "Column": "BL",
+        "Name": "achsen",
+        "Required": false,
+        "Description": "Ganzzahl, Anzahl der Achsen, nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 64,
+        "Column": "BM",
+        "Name": "tempomat",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 65,
+        "Column": "BN",
+        "Name": "standheizung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 66,
+        "Column": "BO",
+        "Name": "kabine",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 67,
+        "Column": "BP",
+        "Name": "schutzdach",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 68,
+        "Column": "BQ",
+        "Name": "vollverkleidung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 69,
+        "Column": "BR",
+        "Name": "komunal",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 70,
+        "Column": "BS",
+        "Name": "kran",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 71,
+        "Column": "BT",
+        "Name": "retarder_intarder",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge, Retarder oder Intarder"
+    },
+    {
+        "Number": 72,
+        "Column": "BU",
+        "Name": "schlafplatz",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 73,
+        "Column": "BV",
+        "Name": "tv",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 74,
+        "Column": "BW",
+        "Name": "wc",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Busse und Wohnmobile"
+    },
+    {
+        "Number": 75,
+        "Column": "BX",
+        "Name": "ladebordwand",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 76,
+        "Column": "BY",
+        "Name": "hydraulikanlage",
+        "Required": false,
+        "Description": "andere Hydraulik=1, Kipphydraulik=2, Schubbodenhydraulik=3, Tankwagenhydraulik=4, nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 77,
+        "Column": "BZ",
+        "Name": "schiebetuer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 78,
+        "Column": "CA",
+        "Name": "radformel",
+        "Required": false,
+        "Description": "0=beliebig, 1=4x2, 2=4x4, 3=6x2, 4=6x4, 5=6x6, 6=8x4, 7= 8x6, 9=8x8, 10=8x2 nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 79,
+        "Column": "CB",
+        "Name": "trennwand",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 80,
+        "Column": "CC",
+        "Name": "ebs",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 81,
+        "Column": "CD",
+        "Name": "vermietbar",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), auch Vermietung m\u00f6glich, nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 82,
+        "Column": "CE",
+        "Name": "kompressor",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 83,
+        "Column": "CF",
+        "Name": "luftfederung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 84,
+        "Column": "CG",
+        "Name": "scheibenbremse",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 85,
+        "Column": "CH",
+        "Name": "fronthydraulik",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 86,
+        "Column": "CI",
+        "Name": "bss",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 87,
+        "Column": "CJ",
+        "Name": "schnellwechsel",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 88,
+        "Column": "CK",
+        "Name": "zsa",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 89,
+        "Column": "CL",
+        "Name": "kueche",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 90,
+        "Column": "CM",
+        "Name": "kuehlbox",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 91,
+        "Column": "CN",
+        "Name": "schlafsitze",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 92,
+        "Column": "CO",
+        "Name": "frontheber",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 93,
+        "Column": "CP",
+        "Name": "sichtbar_nur_fuer_Haendler",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 94,
+        "Column": "CQ",
+        "Name": "reserviert",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja) 2"
+    },
+    {
+        "Number": 95,
+        "Column": "CR",
+        "Name": "envkv",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja) 5"
+    },
+    {
+        "Number": 96,
+        "Column": "CS",
+        "Name": "verbrauch_innerorts",
+        "Required": false,
+        "Description": "Zahl in l/100km (bei Erdgas in kg/100km, wird ignoriert bei Elektro) 4"
+    },
+    {
+        "Number": 97,
+        "Column": "CT",
+        "Name": "verbrauch_ausserorts",
+        "Required": false,
+        "Description": "Zahl in l/100km (bei Erdgas in kg/100km, wird ignoriert bei Elektro) 4"
+    },
+    {
+        "Number": 98,
+        "Column": "CU",
+        "Name": "verbrauch_kombiniert",
+        "Required": false,
+        "Description": "Zahl in l/100km (bei Erdgas in kg/100km, bei Elektro in kWh/100km) 4"
+    },
+    {
+        "Number": 99,
+        "Column": "CV",
+        "Name": "emission",
+        "Required": false,
+        "Description": "Ganzzahl in g/km (wird auf 0 gesetzt bei Elektro)"
+    },
+    {
+        "Number": 100,
+        "Column": "CW",
+        "Name": "xenonscheinwerfer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 101,
+        "Column": "CX",
+        "Name": "sitzheizung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 102,
+        "Column": "CY",
+        "Name": "partikelfilter",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 103,
+        "Column": "CZ",
+        "Name": "einparkhilfe",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja) Dieses Feld wird ersetzt durch die Felder 199-202"
+    },
+    {
+        "Number": 104,
+        "Column": "DA",
+        "Name": "schwackecode",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 105,
+        "Column": "DB",
+        "Name": "lieferdatum",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj'). lieferdatum\u00a0(105/DB) und lieferfrist\u00a0(106/DC) d\u00fcrfen nicht gleichzeitig angegeben werden."
+    },
+    {
+        "Number": 106,
+        "Column": "DC",
+        "Name": "lieferfrist",
+        "Required": false,
+        "Description": "Nur PKW, erlaubte Werte: 1, 2, 3, 4, 5, 6, 7, 14, 42, 60, 90, 120, 150, 180, 270 und 360. lieferdatum\u00a0(105/DB) und lieferfrist\u00a0(106/DC) d\u00fcrfen nicht gleichzeitig angegeben werden."
+    },
+    {
+        "Number": 107,
+        "Column": "DD",
+        "Name": "ueberfuehrungskosten",
+        "Required": false,
+        "Description": "Ganzzahl in Euro, im Endpreis enthaltene Brutto-\u00dcberf\u00fchrungskosten"
+    },
+    {
+        "Number": 108,
+        "Column": "DE",
+        "Name": "hu/au_neu",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), HU und AU werden mit dem Kauf ausgef\u00fchrt"
+    },
+    {
+        "Number": 109,
+        "Column": "DF",
+        "Name": "kraftstoffart",
+        "Required": false,
+        "Description": "1=Benzin, 2=Diesel, 3=Autogas, 4=Erdgas, 6=Elektro, 7=Hybrid, 8=Wasserstoff, 9=Ethanol, 10=Hybrid-Diesel, 11=Bi-Fuel, 0=Andere"
+    },
+    {
+        "Number": 110,
+        "Column": "DG",
+        "Name": "getriebeart",
+        "Required": false,
+        "Description": "'0-3' (0=keine Angabe, 1=Schaltgetriebe, 2=Halbautomatik, 3=Automatik)"
+    },
+    {
+        "Number": 111,
+        "Column": "DH",
+        "Name": "exportfahrzeug",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur PKW Gebrauchtwagen"
+    },
+    {
+        "Number": 112,
+        "Column": "DI",
+        "Name": "tageszulassung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Gebrauchtwagen"
+    },
+    {
+        "Number": 113,
+        "Column": "DJ",
+        "Name": "blickfaenger",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 114,
+        "Column": "DK",
+        "Name": "hsn",
+        "Required": false,
+        "Description": "Zahl"
+    },
+    {
+        "Number": 115,
+        "Column": "DL",
+        "Name": "tsn",
+        "Required": false,
+        "Description": "Ziffern und/oder Buchstaben"
+    },
+    {
+        "Number": 116,
+        "Column": "DM",
+        "Name": "seite_1_inserat",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 117,
+        "Column": "DN",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 118,
+        "Column": "DO",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 119,
+        "Column": "DP",
+        "Name": "e10",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), E10 geeignet - nur PKW, WoMo und LKW bis 7,5t, nur bei Kraftstoff Benzin"
+    },
+    {
+        "Number": 120,
+        "Column": "DQ",
+        "Name": "qualitaetssiegel",
+        "Required": false,
+        "Description": "siehe Gebrauchtwagensiegel"
+    },
+    {
+        "Number": 121,
+        "Column": "DR",
+        "Name": "pflanzenoel",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), Pflanzen\u00f6l geeignet - nur PKW und SZM und nur bei Kraftstoffart Diesel"
+    },
+    {
+        "Number": 122,
+        "Column": "DS",
+        "Name": "scr",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), Harnstofftank - nur SZM, nur Diesel"
+    },
+    {
+        "Number": 123,
+        "Column": "DT",
+        "Name": "koffer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Krad"
+    },
+    {
+        "Number": 124,
+        "Column": "DU",
+        "Name": "sturzbuegel",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Krad"
+    },
+    {
+        "Number": 125,
+        "Column": "DV",
+        "Name": "scheibe",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Krad"
+    },
+    {
+        "Number": 126,
+        "Column": "DW",
+        "Name": "standklima",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo, LKW \u00fcber 7,5t, SZM, Busse"
+    },
+    {
+        "Number": 127,
+        "Column": "DX",
+        "Name": "s-s-bereifung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur SZM"
+    },
+    {
+        "Number": 128,
+        "Column": "DY",
+        "Name": "strassenzulassung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur BauMa"
+    },
+    {
+        "Number": 129,
+        "Column": "DZ",
+        "Name": "etagenbett",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 130,
+        "Column": "EA",
+        "Name": "festbett",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 131,
+        "Column": "EB",
+        "Name": "heckgarage",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 132,
+        "Column": "EC",
+        "Name": "markise",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 133,
+        "Column": "ED",
+        "Name": "sep-dusche",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 134,
+        "Column": "EE",
+        "Name": "solaranlage",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 135,
+        "Column": "EF",
+        "Name": "mittelsitzgruppe",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 136,
+        "Column": "EG",
+        "Name": "rundsitzgruppe",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 137,
+        "Column": "EH",
+        "Name": "seitensitzgruppe",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 138,
+        "Column": "EI",
+        "Name": "hagelschaden",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur WoMo"
+    },
+    {
+        "Number": 139,
+        "Column": "EJ",
+        "Name": "schlafplaetze",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in Pl\u00e4tzen, nur WoMo"
+    },
+    {
+        "Number": 140,
+        "Column": "EK",
+        "Name": "fahrzeuglaenge",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in mm, nur WoMo"
+    },
+    {
+        "Number": 141,
+        "Column": "EL",
+        "Name": "fahrzeugbreite",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in mm, nur WoMo"
+    },
+    {
+        "Number": 142,
+        "Column": "EM",
+        "Name": "fahrzeughoehe",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in mm, nur WoMo"
+    },
+    {
+        "Number": 143,
+        "Column": "EN",
+        "Name": "laderaum-europalette",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in St\u00fcck, nur LKW bis 7,5t, LKW \u00fcber 7,5t, Anh\u00e4nger und Auflieger"
+    },
+    {
+        "Number": 144,
+        "Column": "EO",
+        "Name": "laderaum-volumen",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in m3, nur LKW bis 7,5t, LKW \u00fcber 7,5t, Anh\u00e4nger und Auflieger"
+    },
+    {
+        "Number": 145,
+        "Column": "EP",
+        "Name": "laderaum-laenge",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in mm, nur LKW bis 7,5t, LKW \u00fcber 7,5t, Anh\u00e4nger und Auflieger"
+    },
+    {
+        "Number": 146,
+        "Column": "EQ",
+        "Name": "laderaum-breite",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in mm, nur LKW bis 7,5t, LKW \u00fcber 7,5t, Anh\u00e4nger und Auflieger"
+    },
+    {
+        "Number": 147,
+        "Column": "ER",
+        "Name": "laderaum-hoehe",
+        "Required": false,
+        "Description": "Ganzzahl - Angabe in mm, nur LKW bis 7,5t, LKW \u00fcber 7,5t, Anh\u00e4nger und Auflieger"
+    },
+    {
+        "Number": 148,
+        "Column": "ES",
+        "Name": "inserat als 'neu' markieren",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 149,
+        "Column": "ET",
+        "Name": "effektiver jahreszins",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, effektiver Jahreszins 4"
+    },
+    {
+        "Number": 150,
+        "Column": "EU",
+        "Name": "monatliche rate",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, monatliche Rate 4"
+    },
+    {
+        "Number": 151,
+        "Column": "EV",
+        "Name": "laufzeit",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Laufzeit in Monaten (12, 24, 36, 48, 60, 72, 84 oder 96)"
+    },
+    {
+        "Number": 152,
+        "Column": "EW",
+        "Name": "anzahlung",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Anzahlung (Ganzzahl)"
+    },
+    {
+        "Number": 153,
+        "Column": "EX",
+        "Name": "schlussrate",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Schlussrate (Ganzzahl)"
+    },
+    {
+        "Number": 154,
+        "Column": "EY",
+        "Name": "finanzierungsfeature",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 155,
+        "Column": "EZ",
+        "Name": "interieurfarbe",
+        "Required": false,
+        "Description": "1=Schwarz, 2=Grau, 3=Beige, 4=Braun, 5=Andere, 6=Wei\u00df, 7=Blau, 8=Rot, 9=Gelb, 10=Gr\u00fcn, 11=Orange"
+    },
+    {
+        "Number": 156,
+        "Column": "FA",
+        "Name": "interieurtyp",
+        "Required": false,
+        "Description": "1=Leder, 2=Teilleder, 3=Stoff, 4=Velour, 5=Alcantara, 6=Andere, 7=Kunstleder"
+    },
+    {
+        "Number": 157,
+        "Column": "FB",
+        "Name": "airbag",
+        "Required": false,
+        "Description": "2=Fahrer Airbag, 3=Vordere Airbags, 4=Vorder und Seiten Airbags, 5=Vorder und Seiten und weitere Airbags"
+    },
+    {
+        "Number": 158,
+        "Column": "FC",
+        "Name": "vorbesitzer",
+        "Required": false,
+        "Description": "Anzahl der Vorbesitzer (Positive Ganzzahl)"
+    },
+    {
+        "Number": 159,
+        "Column": "FD",
+        "Name": "top inserat",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 160,
+        "Column": "FE",
+        "Name": "bruttokreditbetrag",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Bruttokreditbetrag 4"
+    },
+    {
+        "Number": 161,
+        "Column": "FF",
+        "Name": "abschlussgebuehren",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Abschlussgeb\u00fchren 4"
+    },
+    {
+        "Number": 162,
+        "Column": "FG",
+        "Name": "ratenabsicherung",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Ratenabsicherung; 0=Ratenabsicherung nicht enthalten, >0=Ratenabsicherung entspricht dem angegebenen Betrag (brutto)4"
+    },
+    {
+        "Number": 163,
+        "Column": "FH",
+        "Name": "nettokreditbetrag",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Nettokreditbetrag 4"
+    },
+    {
+        "Number": 164,
+        "Column": "FI",
+        "Name": "anbieterbank",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Anbieterbank, Text (Feldgr\u00f6\u00dfe max. 150 Zeichen)"
+    },
+    {
+        "Number": 165,
+        "Column": "FJ",
+        "Name": "soll-zinssatz",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Nominaler Zinssatz 4"
+    },
+    {
+        "Number": 166,
+        "Column": "FK",
+        "Name": "art des soll-zinssatzes",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Art des nominalen Zinssatzes: 1=gebunden, 2=ver\u00e4nderlich, 3=kombiniert"
+    },
+    {
+        "Number": 167,
+        "Column": "FL",
+        "Name": "landesversion",
+        "Required": false,
+        "Description": "Landesversion(z.B. AT,DE,IT,ES)"
+    },
+    {
+        "Number": 168,
+        "Column": "FM",
+        "Name": "video-url",
+        "Required": false,
+        "Description": "Youtube Url 3"
+    },
+    {
+        "Number": 169,
+        "Column": "FN",
+        "Name": "energieeffizienzklasse",
+        "Required": false,
+        "Description": "Energieeffizienzklasse (A+++,A++,A+, A, B, C, D, E, F oder G)"
+    },
+    {
+        "Number": 170,
+        "Column": "FO",
+        "Name": "envkv_benzin_sorte",
+        "Required": false,
+        "Description": "Bei Treibstoffart Benzin: die den Verbrauchsangaben zugrundeliegende Benzinsorte (NORMAL, SUPER oder SUPER_PLUS)"
+    },
+    {
+        "Number": 171,
+        "Column": "FP",
+        "Name": "elektrische seitenspiegel",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 172,
+        "Column": "FQ",
+        "Name": "sportfahrwerk",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 173,
+        "Column": "FR",
+        "Name": "sportpaket",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 174,
+        "Column": "FS",
+        "Name": "bluetooth",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 175,
+        "Column": "FT",
+        "Name": "bordcomputer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 176,
+        "Column": "FU",
+        "Name": "cd spieler",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 177,
+        "Column": "FV",
+        "Name": "elektrische sitzeinstellung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 178,
+        "Column": "FW",
+        "Name": "head-up display",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 179,
+        "Column": "FX",
+        "Name": "freisprecheinrichtung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 180,
+        "Column": "FY",
+        "Name": "mp3 schnittstelle",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 181,
+        "Column": "FZ",
+        "Name": "multifunktionslenkrad",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 182,
+        "Column": "GA",
+        "Name": "skisack",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 183,
+        "Column": "GB",
+        "Name": "tuner oder radio",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 184,
+        "Column": "GC",
+        "Name": "sportsitze",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 185,
+        "Column": "GD",
+        "Name": "panorama dach",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 186,
+        "Column": "GE",
+        "Name": "kindersitzbefestigung (ISOFIX)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 187,
+        "Column": "GF",
+        "Name": "kurvenlicht",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 188,
+        "Column": "GG",
+        "Name": "lichtsensor",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 189,
+        "Column": "GH",
+        "Name": "nebelscheinwerfer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 190,
+        "Column": "GI",
+        "Name": "tagfahrlicht",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 191,
+        "Column": "GJ",
+        "Name": "traktionskontrolle",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 192,
+        "Column": "GK",
+        "Name": "start stop automatik",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 193,
+        "Column": "GL",
+        "Name": "regensensor",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 194,
+        "Column": "GM",
+        "Name": "nichtraucher fahrzeug",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 195,
+        "Column": "GN",
+        "Name": "dachreling",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 196,
+        "Column": "GO",
+        "Name": "unfallfahrzeug",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja). Siehe auch Tabelle Besch\u00e4digungen."
+    },
+    {
+        "Number": 197,
+        "Column": "GP",
+        "Name": "fahrtauglich",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja). Siehe auch Tabelle Besch\u00e4digungen."
+    },
+    {
+        "Number": 198,
+        "Column": "GQ",
+        "Name": "produktionsdatum",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 199,
+        "Column": "GR",
+        "Name": "einparkhilfe sensoren vorne",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 200,
+        "Column": "GS",
+        "Name": "einparkhilfe sensoren hinten",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 201,
+        "Column": "GT",
+        "Name": "einparkhilfe kamera",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 202,
+        "Column": "GU",
+        "Name": "einparkhilfe selbstlenkendes system",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 203,
+        "Column": "GV",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 204,
+        "Column": "GW",
+        "Name": "rotstiftpreis",
+        "Required": false,
+        "Description": "'0'=nicht gebucht; '1'=gebucht; NULL keine \u00c4nderung des aktuellen Wertes"
+    },
+    {
+        "Number": 205,
+        "Column": "GX",
+        "Name": "ebayk export",
+        "Required": false,
+        "Description": "'0'=nicht gebucht; '1'=gebucht; NULL keine \u00c4nderung des aktuellen Wertes"
+    },
+    {
+        "Number": 206,
+        "Column": "GY",
+        "Name": "plugin hybrid",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 207,
+        "Column": "GZ",
+        "Name": "kombinierter stromverbrauch",
+        "Required": false,
+        "Description": "Kombinierter Stromverbrauch auch f\u00fcr Plugin-Hybrid Autos in kWh/100km. Pflichtfeld, wenn 95 = ja und 206 = ja"
+    },
+    {
+        "Number": 208,
+        "Column": "HA",
+        "Name": "highlight 1",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 22 Zeichen), m\u00f6gliche Anzahl an Highlights abfragen"
+    },
+    {
+        "Number": 209,
+        "Column": "HB",
+        "Name": "highlight 2",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 22 Zeichen), m\u00f6gliche Anzahl an Highlights abfragen"
+    },
+    {
+        "Number": 210,
+        "Column": "HC",
+        "Name": "highlight 3",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 22 Zeichen), m\u00f6gliche Anzahl an Highlights abfragen"
+    },
+    {
+        "Number": 211,
+        "Column": "HD",
+        "Name": "bedingungen finanzierungsvorschlag",
+        "Required": false,
+        "Description": "Bedingungen Finanzierungsvorschlag, Weitere Bedingungen, Text (Feldgr\u00f6\u00dfe max. 60 Zeichen)"
+    },
+    {
+        "Number": 212,
+        "Column": "HE",
+        "Name": "scheinwerferreinigungsanlage",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja) 6"
+    },
+    {
+        "Number": 213,
+        "Column": "HF",
+        "Name": "fernlichtassistent",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 214,
+        "Column": "HG",
+        "Name": "ambientes licht",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 215,
+        "Column": "HH",
+        "Name": "sitzheizung hinten",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 216,
+        "Column": "HI",
+        "Name": "elektrische sitzeinstellung hinten",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 217,
+        "Column": "HJ",
+        "Name": "raucherpaket",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 218,
+        "Column": "HK",
+        "Name": "umklappbarer beifahrersitz",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 219,
+        "Column": "HL",
+        "Name": "volldigitales kombiinstrument",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 220,
+        "Column": "HM",
+        "Name": "winterpaket",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 221,
+        "Column": "HN",
+        "Name": "android auto",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 222,
+        "Column": "HO",
+        "Name": "apple carplay",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 223,
+        "Column": "HP",
+        "Name": "induktionsladen smartphones",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 224,
+        "Column": "HQ",
+        "Name": "musikstreaming integriert",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 225,
+        "Column": "HR",
+        "Name": "w-lan",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 226,
+        "Column": "HS",
+        "Name": "reifen-allwetterreifen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 227,
+        "Column": "HT",
+        "Name": "reifen-sommerreifen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 228,
+        "Column": "HU",
+        "Name": "reifen-winterreifen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 229,
+        "Column": "HV",
+        "Name": "notrad",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 230,
+        "Column": "HW",
+        "Name": "pannenkitt",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 231,
+        "Column": "HX",
+        "Name": "reserverad",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 232,
+        "Column": "HY",
+        "Name": "stahlfelge",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 233,
+        "Column": "HZ",
+        "Name": "e-fahrzeug-batterie-fehlt",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 234,
+        "Column": "IA",
+        "Name": "e-fahrzeug-batterie-gekauft",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 235,
+        "Column": "IB",
+        "Name": "e-fahrzeug-batterie-gemietet",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 236,
+        "Column": "IC",
+        "Name": "range extender",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 237,
+        "Column": "ID",
+        "Name": "isofix beifahrer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 238,
+        "Column": "IE",
+        "Name": "gep\u00e4ckraumabtrennung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 239,
+        "Column": "IF",
+        "Name": "anh\u00e4ngerkupplung schwenkbar",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 240,
+        "Column": "IG",
+        "Name": "anh\u00e4ngerkupplung abnehmbar",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 241,
+        "Column": "IH",
+        "Name": "anh\u00e4ngerkupplung starr",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 242,
+        "Column": "II",
+        "Name": "schiebet\u00fcr rechts",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 243,
+        "Column": "IJ",
+        "Name": "schiebet\u00fcr links",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 244,
+        "Column": "IK",
+        "Name": "schiebet\u00fcr beidseitig",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 245,
+        "Column": "IL",
+        "Name": "bi-xenon-licht",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 246,
+        "Column": "IM",
+        "Name": "laserlicht-scheinwerfer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 247,
+        "Column": "IN",
+        "Name": "alarmanlage",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 248,
+        "Column": "IO",
+        "Name": "beheizbares lenkrad",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 249,
+        "Column": "IP",
+        "Name": "innenspiegel automatisch abbl.",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 250,
+        "Column": "IQ",
+        "Name": "spurhalteassistent",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 251,
+        "Column": "IR",
+        "Name": "abstandstempomat",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 252,
+        "Column": "IS",
+        "Name": "led-scheinwerfer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 253,
+        "Column": "IT",
+        "Name": "notbremsassistent",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 254,
+        "Column": "IU",
+        "Name": "abstandswarner",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 255,
+        "Column": "IV",
+        "Name": "spurwechselassistent",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 256,
+        "Column": "IW",
+        "Name": "sitzbel\u00fcftung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 257,
+        "Column": "IX",
+        "Name": "mittelarmlehne",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 258,
+        "Column": "IY",
+        "Name": "beheizbare frontscheibe",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 259,
+        "Column": "IZ",
+        "Name": "berganfahrassistent",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 260,
+        "Column": "JA",
+        "Name": "dab-radio",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 261,
+        "Column": "JB",
+        "Name": "elektrische heckklappe",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 262,
+        "Column": "JC",
+        "Name": "led-tagfahrlicht",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 263,
+        "Column": "JD",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 264,
+        "Column": "JE",
+        "Name": "lederlenkrad",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 265,
+        "Column": "JF",
+        "Name": "lordosenst\u00fctze",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 266,
+        "Column": "JG",
+        "Name": "luftfederung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 267,
+        "Column": "JH",
+        "Name": "massagesitz",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 268,
+        "Column": "JI",
+        "Name": "m\u00fcdigkeitswarnsystem",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 269,
+        "Column": "JJ",
+        "Name": "nachtsicht-assistent",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 270,
+        "Column": "JK",
+        "Name": "notrufsystem",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 271,
+        "Column": "JL",
+        "Name": "reifendruckkontrollsystem",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 272,
+        "Column": "JM",
+        "Name": "schaltwippen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 273,
+        "Column": "JN",
+        "Name": "schiebet\u00fcr",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 274,
+        "Column": "JO",
+        "Name": "soundsystem",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 275,
+        "Column": "JP",
+        "Name": "sprachsteuerung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 276,
+        "Column": "JQ",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 277,
+        "Column": "JR",
+        "Name": "touchscreen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 278,
+        "Column": "JS",
+        "Name": "usb",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 279,
+        "Column": "JT",
+        "Name": "verkehrszeichenerkennung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 280,
+        "Column": "JU",
+        "Name": "schl\u00fcssellose zentralverriegelung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 281,
+        "Column": "JV",
+        "Name": "klimaautomatik 2 zonen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 282,
+        "Column": "JW",
+        "Name": "klimaautomatik 3 zonen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 283,
+        "Column": "JX",
+        "Name": "klimaautomatik 4 zonen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 284,
+        "Column": "JY",
+        "Name": "einparkhilfe kamera 360",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 285,
+        "Column": "JZ",
+        "Name": "blendfreies fernlicht (matrix)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 286,
+        "Column": "KA",
+        "Name": "dienstwagen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 287,
+        "Column": "KB",
+        "Name": "ehem. preisempfehlung uvp",
+        "Required": false,
+        "Description": "Zahl, Bruttopreis 4"
+    },
+    {
+        "Number": 288,
+        "Column": "KC",
+        "Name": "ausstattungslinie",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 50 Zeichen)"
+    },
+    {
+        "Number": 289,
+        "Column": "KD",
+        "Name": "bauart",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 20 Zeichen), Herstellerinterne Baureihenbezeichnung z.B. F20 bei BMW, W220 bei Mercedes-Benz"
+    },
+    {
+        "Number": 290,
+        "Column": "KE",
+        "Name": "hereinnahmedatum",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 291,
+        "Column": "KF",
+        "Name": "mobile.de Turboinserat",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 292,
+        "Column": "KG",
+        "Name": "effektiver jahreszins",
+        "Required": false,
+        "Description": "Leasingvorschlag, effektiver Jahreszins 4"
+    },
+    {
+        "Number": 293,
+        "Column": "KH",
+        "Name": "monatliche rate",
+        "Required": false,
+        "Description": "Leasingvorschlag, monatliche Rate (Ganzzahl) brutto"
+    },
+    {
+        "Number": 294,
+        "Column": "KI",
+        "Name": "laufzeit",
+        "Required": false,
+        "Description": "Leasingvorschlag, Laufzeit in Monaten (12, 24, 36, 48, 60, 72, 84 oder 96)"
+    },
+    {
+        "Number": 295,
+        "Column": "KJ",
+        "Name": "anzahlung",
+        "Required": false,
+        "Description": "Leasingvorschlag, Anzahlung (Ganzzahl)"
+    },
+    {
+        "Number": 296,
+        "Column": "KK",
+        "Name": "schlussrate",
+        "Required": false,
+        "Description": "Leasingvorschlag, Schlussrate (Ganzzahl)"
+    },
+    {
+        "Number": 297,
+        "Column": "KL",
+        "Name": "zielgruppe",
+        "Required": false,
+        "Description": "Leasingvorschlag, Zielgruppe: 1=privat, 2=gewerblich, 3=beides"
+    },
+    {
+        "Number": 298,
+        "Column": "KM",
+        "Name": "laufleistung",
+        "Required": false,
+        "Description": "Leasingvorschlag, Gesamtleasinglaufleistung in km (Ganzzahl) - Achtung nicht per anno wegen Leasing\u00fcbernahmen"
+    },
+    {
+        "Number": 299,
+        "Column": "KN",
+        "Name": "leasing restwert",
+        "Required": false,
+        "Description": "Leasingvorschlag, Leasing Restwert 4"
+    },
+    {
+        "Number": 300,
+        "Column": "KO",
+        "Name": "leasing mehrkilometer",
+        "Required": false,
+        "Description": "Leasingvorschlag, Kosten Leasingmehrkilometer in Cent Brutto z.B. 30.54"
+    },
+    {
+        "Number": 301,
+        "Column": "KP",
+        "Name": "leasing minderkilometer",
+        "Required": false,
+        "Description": "Leasingvorschlag, Kosten Leasingminderkilometer in Cent Brutto z.B. 30.54"
+    },
+    {
+        "Number": 302,
+        "Column": "KQ",
+        "Name": "anbieterbank",
+        "Required": false,
+        "Description": "Leasingvorschlag, Anbieterbank, Text (Feldgr\u00f6\u00dfe max. 150 Zeichen)"
+    },
+    {
+        "Number": 303,
+        "Column": "KR",
+        "Name": "soll-zinssatz",
+        "Required": false,
+        "Description": "Leasingvorschlag, Nominaler Zinssatz 4"
+    },
+    {
+        "Number": 304,
+        "Column": "KS",
+        "Name": "art des soll-zinssatzes",
+        "Required": false,
+        "Description": "Leasingvorschlag, Art des nominalen Zinssatzes: 1=gebunden, 2=ver\u00e4nderlich, 3=kombiniert"
+    },
+    {
+        "Number": 305,
+        "Column": "KT",
+        "Name": "bedingungen leasingvorschlag",
+        "Required": false,
+        "Description": "Bedingungen Leasingvorschlag, Weitere Bedingungen, Text (Feldgr\u00f6\u00dfe max. 60 Zeichen)"
+    },
+    {
+        "Number": 306,
+        "Column": "KU",
+        "Name": "leasinggesamtbetrag",
+        "Required": false,
+        "Description": "Leasingvorschlag Gesamtbetrag 4"
+    },
+    {
+        "Number": 307,
+        "Column": "KV",
+        "Name": "nettokreditbetrag",
+        "Required": false,
+        "Description": "Leasingvorschlag, Nettokreditbetrag 4"
+    },
+    {
+        "Number": 308,
+        "Column": "KW",
+        "Name": "schadstoffklassedetail",
+        "Required": false,
+        "Description": "EURO6C, EURO6D_TEMP, EURO6D, EURO6E"
+    },
+    {
+        "Number": 309,
+        "Column": "KX",
+        "Name": "geschwindigkeitsbegrenzungsanlage",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 310,
+        "Column": "KY",
+        "Name": "ekpreis",
+        "Required": false,
+        "Description": "Einkaufspreis in EUR, 7"
+    },
+    {
+        "Number": 311,
+        "Column": "KZ",
+        "Name": "instandsetzungskosten",
+        "Required": false,
+        "Description": "Instandsetzungs-/Hereinnahmekosten in EUR kumuliert, netto4"
+    },
+    {
+        "Number": 312,
+        "Column": "LA",
+        "Name": "mobile.de klicks",
+        "Required": false,
+        "Description": "Gesamtanzahl Nachfrageklicks mobile.de"
+    },
+    {
+        "Number": 313,
+        "Column": "LB",
+        "Name": "co2 emission wltp",
+        "Required": false,
+        "Description": "Ganzzahl in g/km (wird auf 0 gesetzt bei Elektro)"
+    },
+    {
+        "Number": 314,
+        "Column": "LC",
+        "Name": "leads offen",
+        "Required": false,
+        "Description": "Leads, Anzahl in Bearbeitung (Ganzzahl)"
+    },
+    {
+        "Number": 315,
+        "Column": "LD",
+        "Name": "leads offen bearbeiter",
+        "Required": false,
+        "Description": "Leads, Namen Mitarbeiter Leads in Bearbeitung, Text (Feldgr\u00f6\u00dfe max. 150 Zeichen)"
+    },
+    {
+        "Number": 316,
+        "Column": "LE",
+        "Name": "leads offen aktuell",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj'), letzter (aktuellster) Eingang offene Leads"
+    },
+    {
+        "Number": 317,
+        "Column": "LF",
+        "Name": "Lagerplatz",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 50 Zeichen)"
+    },
+    {
+        "Number": 318,
+        "Column": "LG",
+        "Name": "Modellbasis",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 50 Zeichen)"
+    },
+    {
+        "Number": 319,
+        "Column": "LH",
+        "Name": "Modelltext (erweitert)",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 255 Zeichen)"
+    },
+    {
+        "Number": 320,
+        "Column": "LI",
+        "Name": "wltp kraftstoff kombiniert",
+        "Required": false,
+        "Description": "Zahl in l/100km (bei Erdgas in kg/100km, bei reinem elektrischen Motorbetrieb Spalte 405/OP verwenden)"
+    },
+    {
+        "Number": 321,
+        "Column": "LJ",
+        "Name": "Leergewicht",
+        "Required": false,
+        "Description": "Ganzzahl in kg"
+    },
+    {
+        "Number": 322,
+        "Column": "LK",
+        "Name": "Kennzeichen",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 20 Zeichen)"
+    },
+    {
+        "Number": 323,
+        "Column": "LL",
+        "Name": "TwinnerWidget",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 250 Zeichen)"
+    },
+    {
+        "Number": 324,
+        "Column": "LM",
+        "Name": "Leasing Restwertabschlag",
+        "Required": false,
+        "Description": "Leasingvorschlag, Prozentsatz 4"
+    },
+    {
+        "Number": 325,
+        "Column": "LN",
+        "Name": "Modellschl\u00fcssel",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 50 Zeichen) Typenschl\u00fcssel lt. Hersteller z.B. YC21 bei einem BMW 730d F01"
+    },
+    {
+        "Number": 326,
+        "Column": "LO",
+        "Name": "laufleistung (Finanzierung)",
+        "Required": false,
+        "Description": "Finanzierungsvorschlag, Gesamtlaufleistung in km (Ganzzahl) - Achtung nicht per anno wegen Finanzierungs\u00fcbernahmen"
+    },
+    {
+        "Number": 327,
+        "Column": "LP",
+        "Name": "mietfahrzeug (aktiv)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 328,
+        "Column": "LQ",
+        "Name": "datum letzter gro\u00dfer kundendienst",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 329,
+        "Column": "LR",
+        "Name": "km-Stand letzter gro\u00dfer kundendienst",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen"
+    },
+    {
+        "Number": 330,
+        "Column": "LS",
+        "Name": "datum letzter (kleiner) kundendienst",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 331,
+        "Column": "LT",
+        "Name": "km-Stand letzter (kleiner) kundendienst",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen"
+    },
+    {
+        "Number": 332,
+        "Column": "LU",
+        "Name": "datum letzter \u00f6lwechsel",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 333,
+        "Column": "LV",
+        "Name": "km-Stand letzter \u00f6lwechsel",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen"
+    },
+    {
+        "Number": 334,
+        "Column": "LW",
+        "Name": "datum letzter bremsenwechsel",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 335,
+        "Column": "LX",
+        "Name": "km-Stand letzter bremsenwechsel",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen"
+    },
+    {
+        "Number": 336,
+        "Column": "LY",
+        "Name": "wltp kraftstoff innenstadt",
+        "Required": false,
+        "Description": "Zahl in l/100km"
+    },
+    {
+        "Number": 337,
+        "Column": "LZ",
+        "Name": "wltp kraftstoff stadtrand",
+        "Required": false,
+        "Description": "Zahl in l/100km"
+    },
+    {
+        "Number": 338,
+        "Column": "MA",
+        "Name": "wltp kraftstoff landstrasse",
+        "Required": false,
+        "Description": "Zahl in l/100km"
+    },
+    {
+        "Number": 339,
+        "Column": "MB",
+        "Name": "wltp kraftstoff autobahn",
+        "Required": false,
+        "Description": "Zahl in l/100km"
+    },
+    {
+        "Number": 340,
+        "Column": "MC",
+        "Name": "kundenauftrag",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 341,
+        "Column": "MD",
+        "Name": "vorlauf",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 342,
+        "Column": "ME",
+        "Name": "kurvenlicht adaptiv",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 343,
+        "Column": "MF",
+        "Name": "aktionscode",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 15 Zeichen)"
+    },
+    {
+        "Number": 344,
+        "Column": "MG",
+        "Name": "schwacke wenr.",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 15 Zeichen)"
+    },
+    {
+        "Number": 345,
+        "Column": "MH",
+        "Name": "dat sd3 aktennummer",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 15 Zeichen)"
+    },
+    {
+        "Number": 346,
+        "Column": "MI",
+        "Name": "leasing sonderkonditionen",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 30 Zeichen - Kombinierbar mit Trenner |) 1=Inzahlungnahmebonus 2=Umweltbonus 3=Umweltpr\u00e4mie 4=Eroberungspr\u00e4mie 5=Behindertenrabatt 6=Beh\u00f6rdenrabatt 7=BW eGutschein 8=NRW Bonus 9=Berlin Bonus"
+    },
+    {
+        "Number": 347,
+        "Column": "MJ",
+        "Name": "ueberfuhrung enthalten",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 348,
+        "Column": "MK",
+        "Name": "zulassung enthalten",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 349,
+        "Column": "ML",
+        "Name": "kfzlieferung enthalten",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 350,
+        "Column": "MM",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 351,
+        "Column": "MN",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 352,
+        "Column": "MO",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 353,
+        "Column": "MP",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 354,
+        "Column": "MQ",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 355,
+        "Column": "MR",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 356,
+        "Column": "MS",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 357,
+        "Column": "MT",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 358,
+        "Column": "MU",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 359,
+        "Column": "MV",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 360,
+        "Column": "MW",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 361,
+        "Column": "MX",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 362,
+        "Column": "MY",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 363,
+        "Column": "MZ",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 364,
+        "Column": "NA",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 365,
+        "Column": "NB",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 366,
+        "Column": "NC",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 367,
+        "Column": "ND",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 368,
+        "Column": "NE",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 369,
+        "Column": "NF",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 370,
+        "Column": "NG",
+        "Name": "wartung enthalten",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 371,
+        "Column": "NH",
+        "Name": "verschleiss enthalten",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 372,
+        "Column": "NI",
+        "Name": "garantieende datum",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 373,
+        "Column": "NJ",
+        "Name": "auslieferung datum",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 374,
+        "Column": "NK",
+        "Name": "leasingmatrix",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 500 Zeichen) 4 - Syntax: rate in eur brutto#monate#km/jahr|rate in eur brutto#monate#km/jahr|... z.B. 350.00#36#10000|375.99#24#15000"
+    },
+    {
+        "Number": 375,
+        "Column": "NL",
+        "Name": "kampagnenident",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 25 Zeichen)"
+    },
+    {
+        "Number": 376,
+        "Column": "NM",
+        "Name": "Wartung pro Monat",
+        "Required": false,
+        "Description": "Leasingvorschlag, Wartung pro Monat in EUR, netto"
+    },
+    {
+        "Number": 377,
+        "Column": "NN",
+        "Name": "Verschlei\u00df pro Monat",
+        "Required": false,
+        "Description": "Leasingvorschlag, Verschlei\u00df pro Monat in EUR, netto"
+    },
+    {
+        "Number": 378,
+        "Column": "NO",
+        "Name": "Wartung & Verschlei\u00df in Kombination pro Monat",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 379,
+        "Column": "NP",
+        "Name": "Haftplficht pro Monat",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 380,
+        "Column": "NQ",
+        "Name": "Haftpflicht SB",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 381,
+        "Column": "NR",
+        "Name": "Vollkasko pro Monat",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 382,
+        "Column": "NS",
+        "Name": "Vollkasko SB",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 383,
+        "Column": "NT",
+        "Name": "KFZ-Lieferung einmalig",
+        "Required": false,
+        "Description": "Leasingvorschlag, Lieferkosten in EUR, netto"
+    },
+    {
+        "Number": 384,
+        "Column": "NU",
+        "Name": "KFZ-Steuer pro Monat in EUR",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 385,
+        "Column": "NV",
+        "Name": "8-fach Bereifung pro Monat in EUR",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 386,
+        "Column": "NW",
+        "Name": "T\u00dcV (HU+AU) pro Monat in EUR",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 387,
+        "Column": "NX",
+        "Name": "R\u00fcckgabeversicherung pro Monat in EUR",
+        "Required": false,
+        "Description": "Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)"
+    },
+    {
+        "Number": 388,
+        "Column": "NY",
+        "Name": "Zulassungskosten einmalig",
+        "Required": false,
+        "Description": "Leasingvorschlag, Zulassungskosten in EUR, netto"
+    },
+    {
+        "Number": 389,
+        "Column": "NZ",
+        "Name": "klimaautomatik 5 zonen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 390,
+        "Column": "OA",
+        "Name": "Bafa Bonus (Umweltbonus Leasingmarkt)",
+        "Required": false,
+        "Description": "0 = kein Bonus, Wert > 0 = Bonusbetrag"
+    },
+    {
+        "Number": 391,
+        "Column": "OB",
+        "Name": "Zylinder",
+        "Required": false,
+        "Description": "Anzahl der Zylinder (Positive Ganzzahl)"
+    },
+    {
+        "Number": 392,
+        "Column": "OC",
+        "Name": "Modelljahr",
+        "Required": false,
+        "Description": "Modelljahr Ganzzahl ohne Trennzeichen (4-stellig)"
+    },
+    {
+        "Number": 393,
+        "Column": "OD",
+        "Name": "Auktionsfahrzeug",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 394,
+        "Column": "OE",
+        "Name": "Vorbesitzername",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 150 Zeichen)"
+    },
+    {
+        "Number": 395,
+        "Column": "OF",
+        "Name": "Twinner 360Grad URL",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 250 Zeichen)"
+    },
+    {
+        "Number": 396,
+        "Column": "OG",
+        "Name": "Versionsschl\u00fcssel",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 50 Zeichen)"
+    },
+    {
+        "Number": 397,
+        "Column": "OH",
+        "Name": "Grundfarbe aussen",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 25 Zeichen)"
+    },
+    {
+        "Number": 398,
+        "Column": "OI",
+        "Name": "Heckantrieb",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 399,
+        "Column": "OJ",
+        "Name": "Frontantrieb",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 400,
+        "Column": "OK",
+        "Name": "Anzahl G\u00e4nge",
+        "Required": false,
+        "Description": "Anzahl der G\u00e4nge (Positive Ganzzahl)"
+    },
+    {
+        "Number": 401,
+        "Column": "OL",
+        "Name": "Lenkrad h\u00f6henverstellbar",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 402,
+        "Column": "OM",
+        "Name": "Kilometerstand f\u00fcr B\u00f6rsen",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen"
+    },
+    {
+        "Number": 403,
+        "Column": "ON",
+        "Name": "Aussenspiegel autom. abblendend",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 404,
+        "Column": "OO",
+        "Name": "Bonus berechtigt",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 405,
+        "Column": "OP",
+        "Name": "kombinierter stromverbrauch wltp",
+        "Required": false,
+        "Description": "Kombinierter Stromverbrauch in kWh/100km. (bei reinem elektrischen Motorbetrieb)"
+    },
+    {
+        "Number": 406,
+        "Column": "OQ",
+        "Name": "Vornutzung",
+        "Required": false,
+        "Description": "1=Fahrschule, 2=Taxi, 3=DE-Mietfahrzeug, 4=EU-Mietfahrzeug, 5=EU-Fahrzeug"
+    },
+    {
+        "Number": 407,
+        "Column": "OR",
+        "Name": "DAT Europa Code",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 24 Zeichen)"
+    },
+    {
+        "Number": 408,
+        "Column": "OS",
+        "Name": "Handelsname Lieferant",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 40 Zeichen)"
+    },
+    {
+        "Number": 409,
+        "Column": "OT",
+        "Name": "Reifentypkennung",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 40 Zeichen)"
+    },
+    {
+        "Number": 410,
+        "Column": "OU",
+        "Name": "Reifenbezeichnung",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 40 Zeichen)"
+    },
+    {
+        "Number": 411,
+        "Column": "OV",
+        "Name": "Tragf\u00e4higkeitsindex",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen"
+    },
+    {
+        "Number": 412,
+        "Column": "OW",
+        "Name": "Geschwindigkeitsindex",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 2 Zeichen)"
+    },
+    {
+        "Number": 413,
+        "Column": "OX",
+        "Name": "Kraftstoffeffklasse",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 2 Zeichen)"
+    },
+    {
+        "Number": 414,
+        "Column": "OY",
+        "Name": "Nasshaftungsklasse",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 2 Zeichen)"
+    },
+    {
+        "Number": 415,
+        "Column": "OZ",
+        "Name": "Externe Rollger\u00e4uschklasse",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 2 Zeichen)"
+    },
+    {
+        "Number": 416,
+        "Column": "PA",
+        "Name": "Wert externe Rollger\u00e4usch",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen"
+    },
+    {
+        "Number": 417,
+        "Column": "PB",
+        "Name": "reserviert, muss leer sein",
+        "Required": false,
+        "Description": ""
+    },
+    {
+        "Number": 418,
+        "Column": "PC",
+        "Name": "Extreme Schneeverh\u00e4ltnis geeignet",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 419,
+        "Column": "PD",
+        "Name": "Eisreifen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 420,
+        "Column": "PE",
+        "Name": "Herstellungsbeginn Reifentyp",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 421,
+        "Column": "PF",
+        "Name": "Herstellungsende Reifentyp",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 422,
+        "Column": "PG",
+        "Name": "Handelsname",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 40 Zeichen)"
+    },
+    {
+        "Number": 423,
+        "Column": "PH",
+        "Name": "Reifenzusatzinfo",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 75 Zeichen)"
+    },
+    {
+        "Number": 424,
+        "Column": "PI",
+        "Name": "Ladeleistung AC",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen, Angaben in kW"
+    },
+    {
+        "Number": 425,
+        "Column": "PJ",
+        "Name": "Ladeleistung DC",
+        "Required": false,
+        "Description": "Ganzzahl ohne Trennzeichen, Angaben in kW"
+    },
+    {
+        "Number": 426,
+        "Column": "PK",
+        "Name": "EU-Reifenregisternummer (vorne)",
+        "Required": false,
+        "Description": ",Text (Feldgr\u00f6\u00dfe max. 15 Zeichen)"
+    },
+    {
+        "Number": 427,
+        "Column": "PL",
+        "Name": "Fahrzeug im PKA ignorieren",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 428,
+        "Column": "PM",
+        "Name": "Schl\u00fcsselbrettnummer",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 10 Zeichen)"
+    },
+    {
+        "Number": 429,
+        "Column": "PN",
+        "Name": "Teil-Ledscheinwerfer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 430,
+        "Column": "PO",
+        "Name": "Garantie Monate",
+        "Required": false,
+        "Description": "Anzahl der Monate (Positive Ganzzahl)"
+    },
+    {
+        "Number": 431,
+        "Column": "PP",
+        "Name": "Komfortsitz",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 432,
+        "Column": "PQ",
+        "Name": "Keramikbremse",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 433,
+        "Column": "PR",
+        "Name": "Sicherheitsintegralsitze",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 434,
+        "Column": "PS",
+        "Name": "Akustikverglasung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 435,
+        "Column": "PT",
+        "Name": "Elek. Parkbremse",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 436,
+        "Column": "PU",
+        "Name": "Fahrersitz H\u00f6henverstellbar",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 437,
+        "Column": "PV",
+        "Name": "R\u00fcckbank get.umleg.",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 438,
+        "Column": "PW",
+        "Name": "Softclose",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 439,
+        "Column": "PX",
+        "Name": "Bremsbelaganzeige",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 440,
+        "Column": "PY",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 441,
+        "Column": "PZ",
+        "Name": "Audio-Aux-Anschluss",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 442,
+        "Column": "QA",
+        "Name": "iPad/iPod-Anschluss",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 443,
+        "Column": "QB",
+        "Name": "Uhr&Drehzahlm.",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 444,
+        "Column": "QC",
+        "Name": "Allradlenkung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 445,
+        "Column": "QD",
+        "Name": "Au\u00dfenspiegel el. anklap.",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 446,
+        "Column": "QE",
+        "Name": "Au\u00dfenspiegel beheizbar",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 447,
+        "Column": "QF",
+        "Name": "Au\u00dfenspiegel abblend.",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 448,
+        "Column": "QG",
+        "Name": "Dachtr\u00e4ger",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 449,
+        "Column": "QH",
+        "Name": "Optikschwarz",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 450,
+        "Column": "QI",
+        "Name": "Privacy Verglasung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 451,
+        "Column": "QJ",
+        "Name": "Sportabgasanlage",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 452,
+        "Column": "QK",
+        "Name": "W\u00e4rmeschutzglas",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 453,
+        "Column": "QL",
+        "Name": "AktivKopfst\u00fctze",
+        "Required": false,
+        "Description": "'0-2' (0=ohne AktivKopfst., 1=AktivKopfst\u00fctzen vr, 2=AktivKopfst\u00fctzen vr+hi)"
+    },
+    {
+        "Number": 454,
+        "Column": "QM",
+        "Name": "autonomes Fahren",
+        "Required": false,
+        "Description": "'0-5' (0=kein autonomes Fahren, 1=autonomes Fahren Level 1, 2=autonomes Fahren Level 2, 3=autonomes Fahren Level 3, 4=autonomes Fahren Level 4, 5=autonomes Fahren Level 5,)"
+    },
+    {
+        "Number": 455,
+        "Column": "QN",
+        "Name": "Modellreihe",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 60 Zeichen)"
+    },
+    {
+        "Number": 456,
+        "Column": "QO",
+        "Name": "Finanzierungsprodukt",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 60 Zeichen)"
+    },
+    {
+        "Number": 457,
+        "Column": "QP",
+        "Name": "Leasingprodukt",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 60 Zeichen)"
+    },
+    {
+        "Number": 458,
+        "Column": "QQ",
+        "Name": "Motorleistung (max)",
+        "Required": false,
+        "Description": "Ganzzahl, gibt max. KW-Leistung des Fahrzeugs an"
+    },
+    {
+        "Number": 459,
+        "Column": "QR",
+        "Name": "Batteriespannung",
+        "Required": false,
+        "Description": "Ganzzahl, Einheit: Volt"
+    },
+    {
+        "Number": 460,
+        "Column": "QS",
+        "Name": "Batteriekapazit\u00e4t",
+        "Required": false,
+        "Description": "Ganzzahl, Einheit: kWh"
+    },
+    {
+        "Number": 461,
+        "Column": "QT",
+        "Name": "Batteriebauart",
+        "Required": false,
+        "Description": "'0-2' (0=Lithium-Ionen, 1=Lithium-Polymer, 2=Nickelmetallhybrid)"
+    },
+    {
+        "Number": 462,
+        "Column": "QU",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 463,
+        "Column": "QV",
+        "Name": "Quickdrop-System",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 464,
+        "Column": "QW",
+        "Name": "Standardladung",
+        "Required": false,
+        "Description": "Ganzzahl, Einheit: Volt"
+    },
+    {
+        "Number": 465,
+        "Column": "QX",
+        "Name": "Ladedauer bei Standardladung (AC) (Wallbox/Ladestation)",
+        "Required": false,
+        "Description": "Einheit: hh:mm"
+    },
+    {
+        "Number": 466,
+        "Column": "QY",
+        "Name": "Schnellladung",
+        "Required": false,
+        "Description": "Ganzzahl, Einheit: Volt"
+    },
+    {
+        "Number": 467,
+        "Column": "QZ",
+        "Name": "Ladedauer bei Schnellladung (DC) (Wallbox/Ladestation)",
+        "Required": false,
+        "Description": "Einheit: hh:mm"
+    },
+    {
+        "Number": 468,
+        "Column": "RA",
+        "Name": "Elektromotor-Reichweite nach WLTP",
+        "Required": false,
+        "Description": "Einheit: km"
+    },
+    {
+        "Number": 469,
+        "Column": "RB",
+        "Name": "Elektromotor-Reichweite innerorts nach WLTP",
+        "Required": false,
+        "Description": "Einheit: km"
+    },
+    {
+        "Number": 470,
+        "Column": "RC",
+        "Name": "Gesamtreichweite nach WLTP",
+        "Required": false,
+        "Description": "Einheit: km"
+    },
+    {
+        "Number": 471,
+        "Column": "RD",
+        "Name": "Gesamtreichweite innerorts nach WLTP",
+        "Required": false,
+        "Description": "Einheit: km"
+    },
+    {
+        "Number": 472,
+        "Column": "RE",
+        "Name": "MobileAD-ID",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 473,
+        "Column": "RF",
+        "Name": "Gewichtete kombinierte CO2-Emissionen WLTP",
+        "Required": false,
+        "Description": "Ganzzahl in g/km (Nur f\u00fcr Hybrid-Plugin)"
+    },
+    {
+        "Number": 474,
+        "Column": "RG",
+        "Name": "Gewichteter kombinierter Stromverbrauch WLTP",
+        "Required": false,
+        "Description": "Kombinierter Stromverbrauch in kWh/100km. (Nur f\u00fcr Hybrid-Plugin)"
+    },
+    {
+        "Number": 475,
+        "Column": "RH",
+        "Name": "Gewichteter kombinierter Kraftstoffverbrauch WLTP",
+        "Required": false,
+        "Description": "Zahl in l/100km (bei Erdgas in kg/100km, bei Elektro in kWh/100km) (Nur f\u00fcr Hybrid-Plugin)"
+    },
+    {
+        "Number": 476,
+        "Column": "RI",
+        "Name": "M\u00e4ngelhinweis/Unfallinfo",
+        "Required": false,
+        "Description": "Text"
+    },
+    {
+        "Number": 477,
+        "Column": "RJ",
+        "Name": "Hinweis Leasingangebot",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 400 Zeichen)"
+    },
+    {
+        "Number": 478,
+        "Column": "RK",
+        "Name": "Hinweis Finanzierungsangebot",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 400 Zeichen)"
+    },
+    {
+        "Number": 479,
+        "Column": "RL",
+        "Name": "EU-Reifenregisternummer (hinten)",
+        "Required": false,
+        "Description": ",Text (Feldgr\u00f6\u00dfe max. 15 Zeichen)"
+    },
+    {
+        "Number": 480,
+        "Column": "RM",
+        "Name": "Homepage Exklusiv",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 481,
+        "Column": "RN",
+        "Name": "Youngtimer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 482,
+        "Column": "RO",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 483,
+        "Column": "RP",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 484,
+        "Column": "RQ",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 485,
+        "Column": "RR",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 486,
+        "Column": "RS",
+        "Name": "abo standort",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 30 Zeichen) z.B. DE-33602 Bielefeld"
+    },
+    {
+        "Number": 487,
+        "Column": "RT",
+        "Name": "abo mindestalter in jahre",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 488,
+        "Column": "RU",
+        "Name": "abo selbstbeteiligung",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 489,
+        "Column": "RV",
+        "Name": "abo kaution",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 490,
+        "Column": "RW",
+        "Name": "abo vertragsbedingungen",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 400 Zeichen)"
+    },
+    {
+        "Number": 491,
+        "Column": "RX",
+        "Name": "abo mehrkm",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 492,
+        "Column": "RY",
+        "Name": "abo verfuegbarkeit",
+        "Required": false,
+        "Description": "'0-3' (0=k.Angaben, 1=sofort, 2=Innerhalb 14 Tage, 3=innerhalb 4 Wochen, 4=mehr als 4 Wochen)"
+    },
+    {
+        "Number": 493,
+        "Column": "RZ",
+        "Name": "abo lieferdatum",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 494,
+        "Column": "SA",
+        "Name": "abo lieferfrist in tagen",
+        "Required": false,
+        "Description": "'0-360' (0=k.Angaben, erlaubte Werte: 1, 2, 3, 4, 5, 6, 7, 14, 42, 60, 90, 120, 150, 180, 270 und 360. lieferdatum (492/RY) und lieferfrist (493/RZ) d\u00fcrfen nicht gleichzeitig angegeben werden.)"
+    },
+    {
+        "Number": 495,
+        "Column": "SB",
+        "Name": "abo lieferoptionen",
+        "Required": false,
+        "Description": "Text max. 100 Zeichen (z.B. Abholung|Anlieferung)"
+    },
+    {
+        "Number": 496,
+        "Column": "SC",
+        "Name": "abo lieferkosten",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 497,
+        "Column": "SD",
+        "Name": "abo lieferkosten matrix",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 500 Zeichen) 4 - Syntax: rate in eur brutto#monate#km/jahr|rate in eur brutto#monate#km/jahr|... z.B. 350.00#36#10000|375.99#24#15000"
+    },
+    {
+        "Number": 498,
+        "Column": "SE",
+        "Name": "abo bemerkung",
+        "Required": false,
+        "Description": "Text max. 500 Zeichen"
+    },
+    {
+        "Number": 499,
+        "Column": "SF",
+        "Name": "abo highlight",
+        "Required": false,
+        "Description": "Text max. 60 Zeichen"
+    },
+    {
+        "Number": 500,
+        "Column": "SG",
+        "Name": "abo toptags",
+        "Required": false,
+        "Description": "Text max. 60 Zeichen - (Trenner \",\")"
+    },
+    {
+        "Number": 501,
+        "Column": "SH",
+        "Name": "abo zahlungsbedingungen",
+        "Required": false,
+        "Description": "'0-3' (0=k.Angaben, 1=Kreditkarte, 2=Bezahl.de, 3=Bankeinzug)"
+    },
+    {
+        "Number": 502,
+        "Column": "SI",
+        "Name": "abo rate",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 503,
+        "Column": "SJ",
+        "Name": "abo rate matrix",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 500 Zeichen) 4 - Syntax: rate in eur brutto#monate#km/jahr|rate in eur brutto#monate#km/jahr|... z.B. 350.00#36#10000|375.99#24#15000"
+    },
+    {
+        "Number": 504,
+        "Column": "SK",
+        "Name": "abo startgebuehr",
+        "Required": false,
+        "Description": "Ganzzahl"
+    },
+    {
+        "Number": 505,
+        "Column": "SL",
+        "Name": "abo teaser detailpage",
+        "Required": false,
+        "Description": "BildURL f\u00fcr Teaseranzeige Homeapge (inkl. https)"
+    },
+    {
+        "Number": 506,
+        "Column": "SM",
+        "Name": "interner identifier",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 30 Zeichen) - dient als Erg\u00e4nzung f\u00fcr Feld 1 (B)"
+    },
+    {
+        "Number": 507,
+        "Column": "SN",
+        "Name": "freigabe internetver\u00f6ffentlichung",
+        "Required": false,
+        "Description": "'0', '1' (0=f\u00fcr Ver\u00f6ffentlichung freigegeben, 1= f\u00fcr Ver\u00f6ffentlichung gesperrt)"
+    },
+    {
+        "Number": 508,
+        "Column": "SO",
+        "Name": "anzahl bilder",
+        "Required": false,
+        "Description": "Anzahl der Bilder die im Export enthalten sind (Positive Ganzzahl)"
+    },
+    {
+        "Number": 509,
+        "Column": "SP",
+        "Name": "w\u00e4rmepumpe",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 510,
+        "Column": "SQ",
+        "Name": "eink\u00e4ufer",
+        "Required": false,
+        "Description": "Text max. 100 Zeichen"
+    },
+    {
+        "Number": 511,
+        "Column": "SR",
+        "Name": "interne informationen",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 500 Zeichen)"
+    },
+    {
+        "Number": 512,
+        "Column": "SS",
+        "Name": "onlinekauf",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 513,
+        "Column": "ST",
+        "Name": "co2-klasse (wltp)",
+        "Required": false,
+        "Description": "(A, B, C, D, E, F oder G)"
+    },
+    {
+        "Number": 514,
+        "Column": "SU",
+        "Name": "co2-Klasse (wltp) gewichtet, kombiniert",
+        "Required": false,
+        "Description": "(A, B, C, D, E, F oder G)"
+    },
+    {
+        "Number": 515,
+        "Column": "SV",
+        "Name": "co2-klasse (wltp) bei entladener Batterie",
+        "Required": false,
+        "Description": "(A, B, C, D, E, F oder G)"
+    },
+    {
+        "Number": 516,
+        "Column": "SW",
+        "Name": "co2-emissionen (wltp) bei entladener batterie",
+        "Required": false,
+        "Description": "Ganzzahl in g/km (Nur f\u00fcr Hybrid-Plugin)"
+    },
+    {
+        "Number": 517,
+        "Column": "SX",
+        "Name": "kombinierter kraftstoffverbrauch (wltp) entl. batterie",
+        "Required": false,
+        "Description": "Zahl in l/100km (bei Erdgas in kg/100km) (Nur f\u00fcr Hybrid-Plugin)"
+    },
+    {
+        "Number": 518,
+        "Column": "SY",
+        "Name": "state of health (soh) in % (batteriezustand)",
+        "Required": false,
+        "Description": "Ganzahl"
+    },
+    {
+        "Number": 519,
+        "Column": "SZ",
+        "Name": "musterfahrzeug / virtuelles fahrzeug",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 520,
+        "Column": "TA",
+        "Name": "stromverbrauch innenstadt wltp",
+        "Required": false,
+        "Description": "Stromverbrauch Innenstadt in kWh/100km."
+    },
+    {
+        "Number": 521,
+        "Column": "TB",
+        "Name": "stromverbrauch stadtrand wltp",
+        "Required": false,
+        "Description": "Stromverbrauch Stadtrand in kWh/100km."
+    },
+    {
+        "Number": 522,
+        "Column": "TC",
+        "Name": "stromverbrauch landstrasse wltp",
+        "Required": false,
+        "Description": "Stromverbrauch Landstrasse in kWh/100km."
+    },
+    {
+        "Number": 523,
+        "Column": "TD",
+        "Name": "stromverbrauch autobahn wltp",
+        "Required": false,
+        "Description": "Stromverbrauch Autobahn in kWh/100km."
+    },
+    {
+        "Number": 524,
+        "Column": "TE",
+        "Name": "verbrauch entladener batterie innenstadt wltp",
+        "Required": false,
+        "Description": "Zahl in l/100km"
+    },
+    {
+        "Number": 525,
+        "Column": "TF",
+        "Name": "verbrauch entladener batterie stadtrand wltp",
+        "Required": false,
+        "Description": "Zahl in l/100km"
+    },
+    {
+        "Number": 526,
+        "Column": "TG",
+        "Name": "verbrauch entladener batterie landstrasse wltp",
+        "Required": false,
+        "Description": "Zahl in l/100km"
+    },
+    {
+        "Number": 527,
+        "Column": "TH",
+        "Name": "verbrauch entladener batterie autobahn wltp",
+        "Required": false,
+        "Description": "Zahl in l/100km"
+    },
+    {
+        "Number": 528,
+        "Column": "TI",
+        "Name": "link pkwlabel",
+        "Required": false,
+        "Description": "URL (max. 1.000 Zeichen)"
+    },
+    {
+        "Number": 529,
+        "Column": "TJ",
+        "Name": "mittlerer co2 preis pro t",
+        "Required": false,
+        "Description": "Zahl in \u20ac pro Tonne (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 530,
+        "Column": "TK",
+        "Name": "mittlerer co2 preis akkumuliert",
+        "Required": false,
+        "Description": "Zahl in \u20ac (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 531,
+        "Column": "TL",
+        "Name": "niedriger co2 preis pro t",
+        "Required": false,
+        "Description": "Zahl in \u20ac pro Tonne (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 532,
+        "Column": "TM",
+        "Name": "niedriger co2 preis akkumuliert",
+        "Required": false,
+        "Description": "Zahl in \u20ac (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 533,
+        "Column": "TN",
+        "Name": "hoher co2 preis pro tonne",
+        "Required": false,
+        "Description": "Zahl in \u20ac pro Tonne (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 534,
+        "Column": "TO",
+        "Name": "hoher co2 preis akkumuliert",
+        "Required": false,
+        "Description": "Zahl in \u20ac (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 535,
+        "Column": "TP",
+        "Name": "kraftstoffpreis (referenz)",
+        "Required": false,
+        "Description": "Zahl in \u20ac/l (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 536,
+        "Column": "TQ",
+        "Name": "strompreis",
+        "Required": false,
+        "Description": "Zahl in \u20ac/kWh z.B. 0.42"
+    },
+    {
+        "Number": 537,
+        "Column": "TR",
+        "Name": "jahr der energiekosten bei 15.000 km jahresfahrleistung",
+        "Required": false,
+        "Description": "Ganzzahl (YYYY)"
+    },
+    {
+        "Number": 538,
+        "Column": "TS",
+        "Name": "energiekosten bei 15.000 km jahresfahrleistung",
+        "Required": false,
+        "Description": "Zahl in \u20ac (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 539,
+        "Column": "TT",
+        "Name": "kfzsteuer p.a.",
+        "Required": false,
+        "Description": "Zahl in \u20ac (max. 2 Nachkommastellen)"
+    },
+    {
+        "Number": 540,
+        "Column": "TU",
+        "Name": "zeitrahmen (von) co2 kosten",
+        "Required": false,
+        "Description": "Ganzzahl (YYYY)"
+    },
+    {
+        "Number": 541,
+        "Column": "TV",
+        "Name": "zeitrahmen (bis) co2 kosten",
+        "Required": false,
+        "Description": "Ganzzahl (YYYY)"
+    },
+    {
+        "Number": 542,
+        "Column": "TW",
+        "Name": "URL KFZ-Detailseite",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 200 Zeichen)"
+    },
+    {
+        "Number": 543,
+        "Column": "TX",
+        "Name": "KFZ-Ansprechpartner Email",
+        "Required": false,
+        "Description": "Text (Feldgr\u00f6\u00dfe max. 200 Zeichen)"
+    },
+    {
+        "Number": 544,
+        "Column": "TY",
+        "Name": "Letzte Wartung Datum",
+        "Required": false,
+        "Description": "Datumsangabe (Format='tt.mm.jjjj')"
+    },
+    {
+        "Number": 545,
+        "Column": "TZ",
+        "Name": "Letzte Wartung KM",
+        "Required": false,
+        "Description": "Ganzzahl in km"
+    },
+    {
+        "Number": 546,
+        "Column": "UA",
+        "Name": "Anh\u00e4ngelast gebremst",
+        "Required": false,
+        "Description": "Ganzzahl in kg (max. 9999)"
+    },
+    {
+        "Number": 547,
+        "Column": "UB",
+        "Name": "Anh\u00e4ngelast ungebremst",
+        "Required": false,
+        "Description": "Ganzzahl in kg (max. 9999)"
+    },
+    {
+        "Number": 548,
+        "Column": "UC",
+        "Name": "St\u00fctzlast AHK",
+        "Required": false,
+        "Description": "Ganzzahl in kg (max. 999)"
+    },
+    {
+        "Number": 549,
+        "Column": "UD",
+        "Name": "Tankgr\u00f6\u00dfe",
+        "Required": false,
+        "Description": "Ganzzahl in Liter (max. 9999)"
+    },
+    {
+        "Number": 550,
+        "Column": "UE",
+        "Name": "Batteriezertifikat vorhanden",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 551,
+        "Column": "UF",
+        "Name": "Virtuelle Seitenspiegel",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 552,
+        "Column": "UG",
+        "Name": "Service neu",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 553,
+        "Column": "UH",
+        "Name": "Navigationsvorbereitung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 554,
+        "Column": "UI",
+        "Name": "Farbe matt",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 555,
+        "Column": "UJ",
+        "Name": "Rechtslenker",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 556,
+        "Column": "UK",
+        "Name": "Bidirektionales Laden",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 557,
+        "Column": "UL",
+        "Name": "Faltdach",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 558,
+        "Column": "UM",
+        "Name": "Elektr. Sitzeinstellung Memory-Funktion",
+        "Required": false,
+        "Description": "'0-3' (0=k.Angaben, 1=Fahrersitz, 2=Fahrer + Beifahrersitz)"
+    },
+    {
+        "Number": 559,
+        "Column": "UN",
+        "Name": "Ausparkassistent",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 560,
+        "Column": "UO",
+        "Name": "Adaptives Fahrwerk",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 561,
+        "Column": "UP",
+        "Name": "Anh\u00e4ngerrangierassistent",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 562,
+        "Column": "UQ",
+        "Name": "Vorbereitung Anh\u00e4ngerkupplung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 563,
+        "Column": "UR",
+        "Name": "Sitzh\u00f6he (Motorrad)",
+        "Required": false,
+        "Description": "Ganzzahl in mm (max. 999)"
+    },
+    {
+        "Number": 564,
+        "Column": "US",
+        "Name": "Reichweite (Motorrad)",
+        "Required": false,
+        "Description": "Ganzzahl in km"
+    },
+    {
+        "Number": 565,
+        "Column": "UT",
+        "Name": "Stoppie-Control (Motorrad)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 566,
+        "Column": "UU",
+        "Name": "Wheelie-Control (Motorrad)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 567,
+        "Column": "UV",
+        "Name": "Kurven-ABS (Motorrad)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 568,
+        "Column": "UW",
+        "Name": "Schaltautomat (Motorrad)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 569,
+        "Column": "UX",
+        "Name": "Blipper (Motorrad)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 570,
+        "Column": "UY",
+        "Name": "Griffheizung (Motorrad)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 571,
+        "Column": "UZ",
+        "Name": "Semi-aktives Fahrwerk (Motorrad)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 572,
+        "Column": "VA",
+        "Name": "Drossel (Motorrad)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 573,
+        "Column": "VB",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 574,
+        "Column": "VC",
+        "Name": "Stehh\u00f6he (Wohnmobile)",
+        "Required": false,
+        "Description": "Ganzzahl in cm (max. 299)"
+    },
+    {
+        "Number": 575,
+        "Column": "VD",
+        "Name": "SAT-Anlage (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 576,
+        "Column": "VE",
+        "Name": "Fahrradtr\u00e4ger (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 577,
+        "Column": "VF",
+        "Name": "Rangierhilfe (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 578,
+        "Column": "VG",
+        "Name": "Warmwasser (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 579,
+        "Column": "VH",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 580,
+        "Column": "VI",
+        "Name": "Queensize Bett (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 581,
+        "Column": "VJ",
+        "Name": "Franz\u00f6sisches Bett (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 582,
+        "Column": "VK",
+        "Name": "Einzelbett (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 583,
+        "Column": "VL",
+        "Name": "Doppelbett hinten (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 584,
+        "Column": "VM",
+        "Name": "Doppelbett vorne (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 585,
+        "Column": "VN",
+        "Name": "Hubbetten (Klapp) (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 586,
+        "Column": "VO",
+        "Name": "Aufstelldach-Doppelbett (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 587,
+        "Column": "VP",
+        "Name": "Sitz Umbaubett (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 588,
+        "Column": "VQ",
+        "Name": "Sitzgruppe L-Form (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 589,
+        "Column": "VR",
+        "Name": "Sitzgruppe Bar Form (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 590,
+        "Column": "VS",
+        "Name": "Heizung Gas (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 591,
+        "Column": "VT",
+        "Name": "Heizung Diesel (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 592,
+        "Column": "VU",
+        "Name": "Heizung Benzin (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 593,
+        "Column": "VV",
+        "Name": "Heizung Strom (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 594,
+        "Column": "VW",
+        "Name": "Heizung Holz (Wohnmobile)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 595,
+        "Column": "VX",
+        "Name": "L\u00e4nge Typ (NFZ)",
+        "Required": false,
+        "Description": "Text (m\u00f6gliche Werte: L1, L2, L3, L4, L5)"
+    },
+    {
+        "Number": 596,
+        "Column": "VY",
+        "Name": "H\u00f6he Typ (NFZ)",
+        "Required": false,
+        "Description": "Text (m\u00f6gliche Werte: H1, H2, H3)"
+    },
+    {
+        "Number": 597,
+        "Column": "VZ",
+        "Name": "Radstand (Typ)",
+        "Required": false,
+        "Description": "Text (m\u00f6gliche Werte: SHORT, MIDDLE, LONG, EXTRA_LONG)"
+    },
+    {
+        "Number": 598,
+        "Column": "WA",
+        "Name": "Lenkachse",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 599,
+        "Column": "WB",
+        "Name": "Betriebsgewicht",
+        "Required": false,
+        "Description": "Ganzzahl in kg (max. 999.999)"
+    },
+    {
+        "Number": 600,
+        "Column": "WC",
+        "Name": "Colorverglasung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 601,
+        "Column": "WD",
+        "Name": "Nackenheizung (AIRSCARF)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 602,
+        "Column": "WE",
+        "Name": "Tuning",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 603,
+        "Column": "WF",
+        "Name": "Waschwasserstandsanzeige",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 604,
+        "Column": "WG",
+        "Name": "Windschott (Cabrio)",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 605,
+        "Column": "WH",
+        "Name": "Zentralverriegelung mit Funk",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 606,
+        "Column": "WI",
+        "Name": "Batterieladung Steckertyp",
+        "Required": false,
+        "Description": "'0-8' (0=k.Angaben, 1=Schuko, 2=Typ 1, 3=Typ 2, 4=Combo (CCS), 5=CHAdeMO, 6=Typ 1 + CHAdeMO, 7=Typ 2 + CHAdeMO, 8=TESLA_SC)"
+    },
+    {
+        "Number": 607,
+        "Column": "WJ",
+        "Name": "Batterie-Garantie",
+        "Required": false,
+        "Description": "Ganzzahl in Monate"
+    },
+    {
+        "Number": 608,
+        "Column": "WK",
+        "Name": "Felgengr\u00f6\u00dfe",
+        "Required": false,
+        "Description": "Ganzzahl in Zoll"
+    },
+    {
+        "Number": 609,
+        "Column": "WL",
+        "Name": "Zul\u00e4ssiges Gesamtgewicht",
+        "Required": false,
+        "Description": "Ganzzahl in KG"
+    },
+    {
+        "Number": 610,
+        "Column": "WM",
+        "Name": "Radstand",
+        "Required": false,
+        "Description": "Ganzzahl in MM"
+    },
+    {
+        "Number": 611,
+        "Column": "WN",
+        "Name": "Differentialsperre",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 612,
+        "Column": "WO",
+        "Name": "Beifahrer-Doppelsitz",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 613,
+        "Column": "WP",
+        "Name": "Holzboden",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja)"
+    },
+    {
+        "Number": 614,
+        "Column": "WQ",
+        "Name": "Drehschemel",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 615,
+        "Column": "WR",
+        "Name": "Hochlader",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 616,
+        "Column": "WS",
+        "Name": "Innenverkleidung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 617,
+        "Column": "WT",
+        "Name": "Ladeboden - Variabel",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 618,
+        "Column": "WU",
+        "Name": "Ladedruck & Temperaturanzeigen",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 619,
+        "Column": "WV",
+        "Name": "Zusatzscheinwerfer",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 620,
+        "Column": "WW",
+        "Name": "Seilwinde",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 621,
+        "Column": "WX",
+        "Name": "Tachograf",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 622,
+        "Column": "WY",
+        "Name": "",
+        "Required": false,
+        "Description": "reserviert, muss leer sein"
+    },
+    {
+        "Number": 623,
+        "Column": "WZ",
+        "Name": "Verkleidung",
+        "Required": false,
+        "Description": "'0', '1' (0=nein, 1=ja), nur Motorr\u00e4der"
+    },
+    {
+        "Number": 624,
+        "Column": "XA",
+        "Name": "Zuglast AHK",
+        "Required": false,
+        "Description": "'0-4' (0=k.Angaben, 1=2.0t, 2=2.8t, 3=3.5t, 4=2.5t), nur Nutzfahrzeuge"
+    },
+    {
+        "Number": 625,
+        "Column": "XB",
+        "Name": "Anh\u00e4ngerkupplung-NFZ Typ",
+        "Required": false,
+        "Description": "'0-2' (0=k.Angaben, 1=Kugel, 2=Maul)"
+    },
+    {
+        "Number": 626,
+        "Column": "XC",
+        "Name": "Hintert\u00fcr (Art)",
+        "Required": false,
+        "Description": "'0-6' (0=keine Heckt\u00fcr, 1=Heckt\u00fcr, 2=Heckt\u00fcr 180\u00b0, 3=Heckt\u00fcr 270\u00b0, 4=Heckt\u00fcr 90\u00b0, 5=Heckt\u00fcr 256\u00b0, 6=Heckklappe)"
+    },
+    {
+        "Number": 627,
+        "Column": "XD",
+        "Name": "Hochdach (Art)",
+        "Required": false,
+        "Description": "'0-2' (0=keine Heckt\u00fcr, 1=Hochdach, 2=Superhochdach)"
+    },
+    {
+        "Number": 628,
+        "Column": "XE",
+        "Name": "Zustandsbericht",
+        "Required": false,
+        "Description": "'0-5' (0=k.Angaben, 1=sehr guter Zustand, 2=guter Zustand, 3=normaler Zustand, 4=mangelhafter Zustand, 5=sehr schlechter Zustand)"
+    },
+    {
+        "Number": 629,
+        "Column": "XF",
+        "Name": "Mobile.de Parkungen",
+        "Required": false,
+        "Description": "Anzahl der Parkungen auf mobile.de"
+    },
+    {
+        "Number": 630,
+        "Column": "XG",
+        "Name": "Mobile.de Preisrating",
+        "Required": false,
+        "Description": "0-5 (0=k. Angaben, 1=sehr guter Preis , 2=guter Preis , 3=fairer Preis , 4=erh\u00f6hter Preis , 5=hoher Preis)"
+    }
+]

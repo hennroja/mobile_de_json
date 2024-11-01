@@ -1,0 +1,4547 @@
+<table>
+<tr>
+<th>Nr.</th>
+<th>Sp.</th>
+<th>Feldname</th>
+<th>Pflicht</th>
+<th>Beschreibung</th>
+</tr>
+<tr>
+<td><a name="field0">0</a></td>
+<td>A</td>
+<td>kundennummer/filiale</td>
+<td></td>
+<td>Text (Feldgröße max. 30 Zeichen) hier kann sowohl eine Kundennummer als auch ein Standortkürzel/StandortID hinterlegt werden</td>
+</tr>
+<tr>
+<td><a name="field1">1</a></td>
+<td>B</td>
+<td>interne_nummer</td>
+<td>ja</td>
+<td>
+          Text (Feldgröße max. 40 Zeichen, identifiziert ein Fahrzeug eindeutig). Erlaubt ist die Verwendung der Zeichen <strong>a-z</strong>, <strong>A-Z</strong>, der Ziffern <strong>0-9</strong> und der Sonderzeichen <strong>-</strong> und <strong>_</strong>. Alle anderen Zeichen,
+          insbesondere alle anderen Sonderzeichen, Umlaute (<strong>ä</strong>, <strong>ö</strong>, <strong>ü</strong>) und <strong>ß</strong> sind nicht erlaubt (siehe <a href="#ref-ad">Inserate referenzieren (interne Nummer)</a>).
+        </td>
+</tr>
+<tr>
+<td><a name="field2">2</a></td>
+<td>C</td>
+<td>kategorie</td>
+<td>ja</td>
+<td>Text (siehe <a href="#cat-make-mod">Kategorien, Marken, Modelle</a>)</td>
+</tr>
+<tr>
+<td><a name="field3">3</a></td>
+<td>D</td>
+<td>marke</td>
+<td>ja</td>
+<td>Text (siehe <a href="#cat-make-mod">Kategorien, Marken, Modelle</a>)</td>
+</tr>
+<tr>
+<td><a name="field4">4</a></td>
+<td>E</td>
+<td>modell</td>
+<td>ja</td>
+<td>Text (siehe <a href="#cat-make-mod">Kategorien, Marken, Modelle</a>)</td>
+</tr>
+<tr>
+<td><a name="field5">5</a></td>
+<td>F</td>
+<td>leistung</td>
+<td></td>
+<td>Ganzzahl, gibt KW-Leistung des Fahrzeugs an</td>
+</tr>
+<tr>
+<td><a name="field6">6</a></td>
+<td>G</td>
+<td>hu</td>
+<td></td>
+<td>Datumsangabe (Format='mm.jjjj'), Hauptuntersuchung</td>
+</tr>
+<tr>
+<td><a name="field7">7</a></td>
+<td>H</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field8">8</a></td>
+<td>I</td>
+<td>ez</td>
+<td>ja</td>
+<td>Datumsangabe (Format='mm.jjjj' oder Format='tt.mm.jjjj'), Erstzulassung</td>
+</tr>
+<tr>
+<td><a name="field9">9</a></td>
+<td>J</td>
+<td>kilometer</td>
+<td>ja</td>
+<td>Ganzzahl ohne Trennzeichen, gefahrene KM. Pflichtfeld bei gebrauchten PKW, Motorrädern, LKW bis 7,5t, LKW über 7,5t, Sattelzugmaschinen und Bussen.</td>
+</tr>
+<tr>
+<td><a name="field10">10</a></td>
+<td>K</td>
+<td>preis</td>
+<td></td>
+<td>
+          Zahl, Brutto- oder Nettopreis <a href="#fnote1"><sup>1</sup></a> <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field11">11</a></td>
+<td>L</td>
+<td>mwst</td>
+<td>ja</td>
+<td>
+          '0', '1' (0=Mwst ausweisbar, 1=Mwst nicht ausweisbar) <a href="#fnote1"><sup>1</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field12">12</a></td>
+<td>M</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field13">13</a></td>
+<td>N</td>
+<td>oldtimer</td>
+<td></td>
+<td>
+          '0', '1' (0=nein, 1=ja) <a href="#fnote2"><sup>2</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field14">14</a></td>
+<td>O</td>
+<td>vin</td>
+<td></td>
+<td>Text, Fahrzeug-Identifizierungsnummer (optional nur als Information, wird nicht ausgewertet)</td>
+</tr>
+<tr>
+<td><a name="field15">15</a></td>
+<td>P</td>
+<td>beschaedigtes_fahrzeug</td>
+<td>ja</td>
+<td>'0', '1' (0=nein, 1=ja). Siehe auch <a href="https://services.mobile.de/manual/damage.html">Tabelle Beschädigungen</a>.</td>
+</tr>
+<tr>
+<td><a name="field16">16</a></td>
+<td>Q</td>
+<td>farbe</td>
+<td></td>
+<td>Text (Feldgröße max. 32 Zeichen), darf nicht nur aus Ziffern bestehen</td>
+</tr>
+<tr>
+<td><a name="field17">17</a></td>
+<td>R</td>
+<td>klima</td>
+<td></td>
+<td>'0-2' (0=Keine Klimaanlage oder Klimaautomatik, 1=Klimaanlage, 2=Klimaautomatik)</td>
+</tr>
+<tr>
+<td><a name="field18">18</a></td>
+<td>S</td>
+<td>taxi</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field19">19</a></td>
+<td>T</td>
+<td>behindertengerecht</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field20">20</a></td>
+<td>U</td>
+<td>jahreswagen</td>
+<td>ja</td>
+<td>
+          '0', '1' (0=nein, 1=ja) <a href="#fnote2"><sup>2</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field21">21</a></td>
+<td>V</td>
+<td>neufahrzeug</td>
+<td>ja</td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field22">22</a></td>
+<td>W</td>
+<td>unsere empfehlung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field23">23</a></td>
+<td>X</td>
+<td>haendlerpreis</td>
+<td></td>
+<td>
+          Zahl, Brutto- oder Nettopreis für Händler <a href="#fnote1"><sup>1</sup></a> <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field24">24</a></td>
+<td>Y</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field25">25</a></td>
+<td>Z</td>
+<td>bemerkung</td>
+<td></td>
+<td>
+          Text (Feldgröße max. 5000 Zeichen). Zugehörige Komma in einem Ausstattungsmerkmal mit \, maskieren z.B. Rücksitzbank \, geteilt umlegbar. PR/SA-Nummern mit || vom Ausstattungstext trennen z.B. 06D||HeadUp-Display mit Augmented Reality. Siehe auch
+          <a href="https://services.mobile.de/manual/formatting-syntax.html">Formatting Syntax</a> (nur auf Englisch).
+        </td>
+</tr>
+<tr>
+<td><a name="field26">26</a></td>
+<td>AA</td>
+<td>bild_id</td>
+<td></td>
+<td>
+          Text. Zulässige Zeichen sind Zahlen, die Buchstaben A bis Z bzw. a bis z sowie Leerzeichen und Bindestrich. Unterstrich ist möglich, aber nicht empfohlen. Alle anderen Zeichen, insbesondere alle anderen Sonderzeichen, Umlaute (ä,ö,ü) und ß sind nicht erlaubt.
+          Die Bild-ID dient der Übermittlung der Information, welches Bild welchem Fahrzeug zugeordnet wird. Wird eine Bild-ID im Feld <a href="#field26"><strong>bild_id (26/AA)</strong></a>
+          übertragen, so hat diese Information Priorität über das Feld
+          <a href="#field1"><strong>interne_nummer (1/B)</strong></a>. Die Benennungslogik für die Bilderdateien ist [bild_id]_1.jpg (oder [bild_id]_01.jpg), ... , [bild_id]_15.jpg. Wird das Feld leer geliefert, so wird weiterhin die Bildzuordnung über das Feld <a href="#field1"><strong>interne_nummer (1/B)</strong></a> gesteuert (siehe
+          <a href="#ref-pic">Bilder referenzieren</a>).
+        </td>
+</tr>
+<tr>
+<td><a name="field27">27</a></td>
+<td>AB</td>
+<td>metallic</td>
+<td>ja</td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field28">28</a></td>
+<td>AC</td>
+<td>waehrung</td>
+<td></td>
+<td>Nur noch " EUR"</td>
+</tr>
+<tr>
+<td><a name="field29">29</a></td>
+<td>AD</td>
+<td>mwstsatz</td>
+<td></td>
+<td>
+          MwSt-Satz. Ganz- oder Fließkommazahl. Siehe <a href="https://services.mobile.de/refdata/sites/GERMANY/vatrates">Referenzdaten</a> für mögliche Werte. <a href="#fnote1"><sup>1</sup></a> <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field30">30</a></td>
+<td>AE</td>
+<td>garantie</td>
+<td>ja</td>
+<td>'0', '1' (0=ohne Garantie, 1=Garantie inkl.)</td>
+</tr>
+<tr>
+<td><a name="field31">31</a></td>
+<td>AF</td>
+<td>leichtmetallfelgen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field32">32</a></td>
+<td>AG</td>
+<td>esp</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field33">33</a></td>
+<td>AH</td>
+<td>abs</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field34">34</a></td>
+<td>AI</td>
+<td>Anhängerkupplung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field35">35</a></td>
+<td>AJ</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field36">36</a></td>
+<td>AK</td>
+<td>wegfahrsperre</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field37">37</a></td>
+<td>AL</td>
+<td>navigationssystem</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field38">38</a></td>
+<td>AM</td>
+<td>schiebedach</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field39">39</a></td>
+<td>AN</td>
+<td>zentralverriegelung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field40">40</a></td>
+<td>AO</td>
+<td>fensterheber</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field41">41</a></td>
+<td>AP</td>
+<td>allradantrieb</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field42">42</a></td>
+<td>AQ</td>
+<td>tueren</td>
+<td></td>
+<td>Ganzzahl, Anzahl der Türen des Fahrzeugs</td>
+</tr>
+<tr>
+<td><a name="field43">43</a></td>
+<td>AR</td>
+<td>umweltplakette</td>
+<td></td>
+<td>1=keine Plakette, 2=rot, 3=gelb, 4=grün</td>
+</tr>
+<tr>
+<td><a name="field44">44</a></td>
+<td>AS</td>
+<td>servolenkung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field45">45</a></td>
+<td>AT</td>
+<td>biodiesel</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), Biodiesel geeignet, nur bei Kraftstoffart Diesel</td>
+</tr>
+<tr>
+<td><a name="field46">46</a></td>
+<td>AU</td>
+<td>scheckheftgepflegt</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field47">47</a></td>
+<td>AV</td>
+<td>katalysator</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Motorräder</td>
+</tr>
+<tr>
+<td><a name="field48">48</a></td>
+<td>AW</td>
+<td>kickstarter</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Motorräder</td>
+</tr>
+<tr>
+<td><a name="field49">49</a></td>
+<td>AX</td>
+<td>estarter</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Motorräder</td>
+</tr>
+<tr>
+<td><a name="field50">50</a></td>
+<td>AY</td>
+<td>vorfuehrfahrzeug</td>
+<td>ja</td>
+<td>
+          '0', '1' (0=nein, 1=ja) <a href="#fnote2"><sup>2</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field51">51</a></td>
+<td>AZ</td>
+<td>antrieb</td>
+<td></td>
+<td>'1-3' (1=Kette, 2=Kardan, 3=Riemen), nur Motorräder</td>
+</tr>
+<tr>
+<td><a name="field52">52</a></td>
+<td>BA</td>
+<td>ccm</td>
+<td></td>
+<td>Ganzzahl, gibt den Hubraum des Fahrzeugs an</td>
+</tr>
+<tr>
+<td><a name="field53">53</a></td>
+<td>BB</td>
+<td>tragkraft</td>
+<td></td>
+<td>Ganzzahl in kg, nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field54">54</a></td>
+<td>BC</td>
+<td>nutzlast</td>
+<td></td>
+<td>Ganzzahl in kg, nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field55">55</a></td>
+<td>BD</td>
+<td>gesamtgewicht</td>
+<td></td>
+<td>Ganzzahl in kg, nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field56">56</a></td>
+<td>BE</td>
+<td>hubhoehe</td>
+<td></td>
+<td>Ganzzahl in mm, nur Stapler</td>
+</tr>
+<tr>
+<td><a name="field57">57</a></td>
+<td>BF</td>
+<td>bauhoehe</td>
+<td></td>
+<td>Ganzzahl in mm, nur Stapler</td>
+</tr>
+<tr>
+<td><a name="field58">58</a></td>
+<td>BG</td>
+<td>baujahr</td>
+<td></td>
+<td>Ganzzahl 4-stellig</td>
+</tr>
+<tr>
+<td><a name="field59">59</a></td>
+<td>BH</td>
+<td>betriebsstunden</td>
+<td></td>
+<td>Ganzzahl, nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field60">60</a></td>
+<td>BI</td>
+<td>sitze</td>
+<td></td>
+<td>Anzahl der Fahrgastsitzplätze - nur Busse, PKW und LKW bis 7,5 t</td>
+</tr>
+<tr>
+<td><a name="field61">61</a></td>
+<td>BJ</td>
+<td>schadstoff</td>
+<td></td>
+<td>'1-7' (1=euro1, 2=euro2, 3=euro3, 4=euro4, 5=euro5, 6=euro6, 7=euro7), Schadstoffklasse</td>
+</tr>
+<tr>
+<td><a name="field62">62</a></td>
+<td>BK</td>
+<td>kabinenart</td>
+<td></td>
+<td>'1-4' (1=Doppelkabine, 2=Liegeplatz, 3=Nahverkehr, 4=Fernverkehr), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field63">63</a></td>
+<td>BL</td>
+<td>achsen</td>
+<td></td>
+<td>Ganzzahl, Anzahl der Achsen, nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field64">64</a></td>
+<td>BM</td>
+<td>tempomat</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field65">65</a></td>
+<td>BN</td>
+<td>standheizung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field66">66</a></td>
+<td>BO</td>
+<td>kabine</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field67">67</a></td>
+<td>BP</td>
+<td>schutzdach</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field68">68</a></td>
+<td>BQ</td>
+<td>vollverkleidung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field69">69</a></td>
+<td>BR</td>
+<td>komunal</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field70">70</a></td>
+<td>BS</td>
+<td>kran</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field71">71</a></td>
+<td>BT</td>
+<td>retarder_intarder</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge, Retarder oder Intarder</td>
+</tr>
+<tr>
+<td><a name="field72">72</a></td>
+<td>BU</td>
+<td>schlafplatz</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field73">73</a></td>
+<td>BV</td>
+<td>tv</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field74">74</a></td>
+<td>BW</td>
+<td>wc</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Busse und Wohnmobile</td>
+</tr>
+<tr>
+<td><a name="field75">75</a></td>
+<td>BX</td>
+<td>ladebordwand</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field76">76</a></td>
+<td>BY</td>
+<td>hydraulikanlage</td>
+<td></td>
+<td>andere Hydraulik=1, Kipphydraulik=2, Schubbodenhydraulik=3, Tankwagenhydraulik=4, nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field77">77</a></td>
+<td>BZ</td>
+<td>schiebetuer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field78">78</a></td>
+<td>CA</td>
+<td>radformel</td>
+<td></td>
+<td>0=beliebig, 1=4x2, 2=4x4, 3=6x2, 4=6x4, 5=6x6, 6=8x4, 7= 8x6, 9=8x8, 10=8x2 nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field79">79</a></td>
+<td>CB</td>
+<td>trennwand</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field80">80</a></td>
+<td>CC</td>
+<td>ebs</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field81">81</a></td>
+<td>CD</td>
+<td>vermietbar</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), auch Vermietung möglich, nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field82">82</a></td>
+<td>CE</td>
+<td>kompressor</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field83">83</a></td>
+<td>CF</td>
+<td>luftfederung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field84">84</a></td>
+<td>CG</td>
+<td>scheibenbremse</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field85">85</a></td>
+<td>CH</td>
+<td>fronthydraulik</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field86">86</a></td>
+<td>CI</td>
+<td>bss</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field87">87</a></td>
+<td>CJ</td>
+<td>schnellwechsel</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field88">88</a></td>
+<td>CK</td>
+<td>zsa</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field89">89</a></td>
+<td>CL</td>
+<td>kueche</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field90">90</a></td>
+<td>CM</td>
+<td>kuehlbox</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field91">91</a></td>
+<td>CN</td>
+<td>schlafsitze</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field92">92</a></td>
+<td>CO</td>
+<td>frontheber</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field93">93</a></td>
+<td>CP</td>
+<td>sichtbar_nur_fuer_Haendler</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field94">94</a></td>
+<td>CQ</td>
+<td>reserviert</td>
+<td></td>
+<td>
+          '0', '1' (0=nein, 1=ja) <a href="#fnote2"><sup>2</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field95">95</a></td>
+<td>CR</td>
+<td>envkv</td>
+<td></td>
+<td>
+          '0', '1' (0=nein, 1=ja) <a href="#fnote5"><sup>5</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field96">96</a></td>
+<td>CS</td>
+<td>verbrauch_innerorts</td>
+<td></td>
+<td>
+          Zahl in l/100km (bei Erdgas in kg/100km, wird ignoriert bei Elektro) <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field97">97</a></td>
+<td>CT</td>
+<td>verbrauch_ausserorts</td>
+<td></td>
+<td>
+          Zahl in l/100km (bei Erdgas in kg/100km, wird ignoriert bei Elektro) <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field98">98</a></td>
+<td>CU</td>
+<td>verbrauch_kombiniert</td>
+<td></td>
+<td>
+          Zahl in l/100km (bei Erdgas in kg/100km, bei Elektro in kWh/100km) <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field99">99</a></td>
+<td>CV</td>
+<td>emission</td>
+<td></td>
+<td>Ganzzahl in g/km (wird auf 0 gesetzt bei Elektro)</td>
+</tr>
+<tr>
+<td><a name="field100">100</a></td>
+<td>CW</td>
+<td>xenonscheinwerfer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field101">101</a></td>
+<td>CX</td>
+<td>sitzheizung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field102">102</a></td>
+<td>CY</td>
+<td>partikelfilter</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field103">103</a></td>
+<td>CZ</td>
+<td>einparkhilfe</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja) Dieses Feld wird ersetzt durch die Felder 199-202</td>
+</tr>
+<tr>
+<td><a name="field104">104</a></td>
+<td>DA</td>
+<td>schwackecode</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field105">105</a></td>
+<td>DB</td>
+<td>lieferdatum</td>
+<td></td>
+<td>
+          Datumsangabe (Format='tt.mm.jjjj'). <a href="#field105"><strong>lieferdatum (105/DB)</strong></a> und <a href="#field106"><strong>lieferfrist (106/DC)</strong></a> dürfen nicht gleichzeitig angegeben werden.
+        </td>
+</tr>
+<tr>
+<td><a name="field106">106</a></td>
+<td>DC</td>
+<td>lieferfrist</td>
+<td></td>
+<td>
+          Nur PKW, erlaubte Werte: 1, 2, 3, 4, 5, 6, 7, 14, 42, 60, 90, 120, 150, 180, 270 und 360. <a href="#field105"><strong>lieferdatum (105/DB)</strong></a> und <a href="#field106"><strong>lieferfrist (106/DC)</strong></a> dürfen nicht gleichzeitig angegeben werden.
+        </td>
+</tr>
+<tr>
+<td><a name="field107">107</a></td>
+<td>DD</td>
+<td>ueberfuehrungskosten</td>
+<td></td>
+<td>Ganzzahl in Euro, im Endpreis enthaltene Brutto-Überführungskosten</td>
+</tr>
+<tr>
+<td><a name="field108">108</a></td>
+<td>DE</td>
+<td>hu/au_neu</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), HU und AU werden mit dem Kauf ausgeführt</td>
+</tr>
+<tr>
+<td><a name="field109">109</a></td>
+<td>DF</td>
+<td>kraftstoffart</td>
+<td></td>
+<td>1=Benzin, 2=Diesel, 3=Autogas, 4=Erdgas, 6=Elektro, 7=Hybrid, 8=Wasserstoff, 9=Ethanol, 10=Hybrid-Diesel, 11=Bi-Fuel, 0=Andere</td>
+</tr>
+<tr>
+<td><a name="field110">110</a></td>
+<td>DG</td>
+<td>getriebeart</td>
+<td></td>
+<td>'0-3' (0=keine Angabe, 1=Schaltgetriebe, 2=Halbautomatik, 3=Automatik)</td>
+</tr>
+<tr>
+<td><a name="field111">111</a></td>
+<td>DH</td>
+<td>exportfahrzeug</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur PKW Gebrauchtwagen</td>
+</tr>
+<tr>
+<td><a name="field112">112</a></td>
+<td>DI</td>
+<td>tageszulassung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Gebrauchtwagen</td>
+</tr>
+<tr>
+<td><a name="field113">113</a></td>
+<td>DJ</td>
+<td>blickfaenger</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field114">114</a></td>
+<td>DK</td>
+<td>hsn</td>
+<td></td>
+<td>Zahl</td>
+</tr>
+<tr>
+<td><a name="field115">115</a></td>
+<td>DL</td>
+<td>tsn</td>
+<td></td>
+<td>Ziffern und/oder Buchstaben</td>
+</tr>
+<tr>
+<td><a name="field116">116</a></td>
+<td>DM</td>
+<td>seite_1_inserat</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field117">117</a></td>
+<td>DN</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field118">118</a></td>
+<td>DO</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field119">119</a></td>
+<td>DP</td>
+<td>e10</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), E10 geeignet - nur PKW, WoMo und LKW bis 7,5t, nur bei Kraftstoff Benzin</td>
+</tr>
+<tr>
+<td><a name="field120">120</a></td>
+<td>DQ</td>
+<td>qualitaetssiegel</td>
+<td></td>
+<!--<td>siehe <a href="https://services.mobile.de/manual/used-car-seals_de.html">Gebrauchtwagensiegel</a></td>-->
+<td>siehe <a href="https://www.eautoseller.de/doku/used-car-seals_de.html">Gebrauchtwagensiegel</a></td>
+</tr>
+<tr>
+<td><a name="field121">121</a></td>
+<td>DR</td>
+<td>pflanzenoel</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), Pflanzenöl geeignet - nur PKW und SZM und nur bei Kraftstoffart Diesel</td>
+</tr>
+<tr>
+<td><a name="field122">122</a></td>
+<td>DS</td>
+<td>scr</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), Harnstofftank - nur SZM, nur Diesel</td>
+</tr>
+<tr>
+<td><a name="field123">123</a></td>
+<td>DT</td>
+<td>koffer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Krad</td>
+</tr>
+<tr>
+<td><a name="field124">124</a></td>
+<td>DU</td>
+<td>sturzbuegel</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Krad</td>
+</tr>
+<tr>
+<td><a name="field125">125</a></td>
+<td>DV</td>
+<td>scheibe</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Krad</td>
+</tr>
+<tr>
+<td><a name="field126">126</a></td>
+<td>DW</td>
+<td>standklima</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo, LKW über 7,5t, SZM, Busse</td>
+</tr>
+<tr>
+<td><a name="field127">127</a></td>
+<td>DX</td>
+<td>s-s-bereifung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur SZM</td>
+</tr>
+<tr>
+<td><a name="field128">128</a></td>
+<td>DY</td>
+<td>strassenzulassung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur BauMa</td>
+</tr>
+<tr>
+<td><a name="field129">129</a></td>
+<td>DZ</td>
+<td>etagenbett</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field130">130</a></td>
+<td>EA</td>
+<td>festbett</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field131">131</a></td>
+<td>EB</td>
+<td>heckgarage</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field132">132</a></td>
+<td>EC</td>
+<td>markise</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field133">133</a></td>
+<td>ED</td>
+<td>sep-dusche</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field134">134</a></td>
+<td>EE</td>
+<td>solaranlage</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field135">135</a></td>
+<td>EF</td>
+<td>mittelsitzgruppe</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field136">136</a></td>
+<td>EG</td>
+<td>rundsitzgruppe</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field137">137</a></td>
+<td>EH</td>
+<td>seitensitzgruppe</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field138">138</a></td>
+<td>EI</td>
+<td>hagelschaden</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field139">139</a></td>
+<td>EJ</td>
+<td>schlafplaetze</td>
+<td></td>
+<td>Ganzzahl - Angabe in Plätzen, nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field140">140</a></td>
+<td>EK</td>
+<td>fahrzeuglaenge</td>
+<td></td>
+<td>Ganzzahl - Angabe in mm, nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field141">141</a></td>
+<td>EL</td>
+<td>fahrzeugbreite</td>
+<td></td>
+<td>Ganzzahl - Angabe in mm, nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field142">142</a></td>
+<td>EM</td>
+<td>fahrzeughoehe</td>
+<td></td>
+<td>Ganzzahl - Angabe in mm, nur WoMo</td>
+</tr>
+<tr>
+<td><a name="field143">143</a></td>
+<td>EN</td>
+<td>laderaum-europalette</td>
+<td></td>
+<td>Ganzzahl - Angabe in Stück, nur LKW bis 7,5t, LKW über 7,5t, Anhänger und Auflieger</td>
+</tr>
+<tr>
+<td><a name="field144">144</a></td>
+<td>EO</td>
+<td>laderaum-volumen</td>
+<td></td>
+<td>Ganzzahl - Angabe in m<sup>3</sup>, nur LKW bis 7,5t, LKW über 7,5t, Anhänger und Auflieger</td>
+</tr>
+<tr>
+<td><a name="field145">145</a></td>
+<td>EP</td>
+<td>laderaum-laenge</td>
+<td></td>
+<td>Ganzzahl - Angabe in mm, nur LKW bis 7,5t, LKW über 7,5t, Anhänger und Auflieger</td>
+</tr>
+<tr>
+<td><a name="field146">146</a></td>
+<td>EQ</td>
+<td>laderaum-breite</td>
+<td></td>
+<td>Ganzzahl - Angabe in mm, nur LKW bis 7,5t, LKW über 7,5t, Anhänger und Auflieger</td>
+</tr>
+<tr>
+<td><a name="field147">147</a></td>
+<td>ER</td>
+<td>laderaum-hoehe</td>
+<td></td>
+<td>Ganzzahl - Angabe in mm, nur LKW bis 7,5t, LKW über 7,5t, Anhänger und Auflieger</td>
+</tr>
+<tr>
+<td><a name="field148">148</a></td>
+<td>ES</td>
+<td>inserat als 'neu' markieren</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field149">149</a></td>
+<td>ET</td>
+<td>effektiver jahreszins</td>
+<td></td>
+<td>
+          Finanzierungsvorschlag, effektiver Jahreszins <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field150">150</a></td>
+<td>EU</td>
+<td>monatliche rate</td>
+<td></td>
+<td>
+          Finanzierungsvorschlag, monatliche Rate <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field151">151</a></td>
+<td>EV</td>
+<td>laufzeit</td>
+<td></td>
+<td>Finanzierungsvorschlag, Laufzeit in Monaten (12, 24, 36, 48, 60, 72, 84 oder 96)</td>
+</tr>
+<tr>
+<td><a name="field152">152</a></td>
+<td>EW</td>
+<td>anzahlung</td>
+<td></td>
+<td>Finanzierungsvorschlag, Anzahlung (Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field153">153</a></td>
+<td>EX</td>
+<td>schlussrate</td>
+<td></td>
+<td>Finanzierungsvorschlag, Schlussrate (Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field154">154</a></td>
+<td>EY</td>
+<td>finanzierungsfeature</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field155">155</a></td>
+<td>EZ</td>
+<td>interieurfarbe</td>
+<td></td>
+<td>1=Schwarz, 2=Grau, 3=Beige, 4=Braun, 5=Andere, 6=Weiß, 7=Blau, 8=Rot, 9=Gelb, 10=Grün, 11=Orange</td>
+</tr>
+<tr>
+<td><a name="field156">156</a></td>
+<td>FA</td>
+<td>interieurtyp</td>
+<td></td>
+<td>1=Leder, 2=Teilleder, 3=Stoff, 4=Velour, 5=Alcantara, 6=Andere, 7=Kunstleder</td>
+</tr>
+<tr>
+<td><a name="field157">157</a></td>
+<td>FB</td>
+<td>airbag</td>
+<td></td>
+<td>2=Fahrer Airbag, 3=Vordere Airbags, 4=Vorder und Seiten Airbags, 5=Vorder und Seiten und weitere Airbags</td>
+</tr>
+<tr>
+<td><a name="field158">158</a></td>
+<td>FC</td>
+<td>vorbesitzer</td>
+<td></td>
+<td>Anzahl der Vorbesitzer (Positive Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field159">159</a></td>
+<td>FD</td>
+<td>top inserat</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field160">160</a></td>
+<td>FE</td>
+<td>bruttokreditbetrag</td>
+<td></td>
+<td>
+          Finanzierungsvorschlag, Bruttokreditbetrag <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field161">161</a></td>
+<td>FF</td>
+<td>abschlussgebuehren</td>
+<td></td>
+<td>
+          Finanzierungsvorschlag, Abschlussgebühren <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field162">162</a></td>
+<td>FG</td>
+<td>ratenabsicherung</td>
+<td></td>
+<td>
+          Finanzierungsvorschlag, Ratenabsicherung; 0=Ratenabsicherung nicht enthalten, &gt;0=Ratenabsicherung entspricht dem angegebenen Betrag (brutto)<a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field163">163</a></td>
+<td>FH</td>
+<td>nettokreditbetrag</td>
+<td></td>
+<td>
+          Finanzierungsvorschlag, Nettokreditbetrag <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field164">164</a></td>
+<td>FI</td>
+<td>anbieterbank</td>
+<td></td>
+<td>Finanzierungsvorschlag, Anbieterbank, Text (Feldgröße max. 150 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field165">165</a></td>
+<td>FJ</td>
+<td>soll-zinssatz</td>
+<td></td>
+<td>
+          Finanzierungsvorschlag, Nominaler Zinssatz <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field166">166</a></td>
+<td>FK</td>
+<td>art des soll-zinssatzes</td>
+<td></td>
+<td>Finanzierungsvorschlag, Art des nominalen Zinssatzes: 1=gebunden, 2=veränderlich, 3=kombiniert</td>
+</tr>
+<tr>
+<td><a name="field167">167</a></td>
+<td>FL</td>
+<td>landesversion</td>
+<td></td>
+<td>Landesversion(z.B. AT,DE,IT,ES)</td>
+</tr>
+<tr>
+<td><a name="field168">168</a></td>
+<td>FM</td>
+<td>video-url</td>
+<td></td>
+<td>
+          Youtube Url <a href="#fnote3"><sup>3</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field169">169</a></td>
+<td>FN</td>
+<td>energieeffizienzklasse</td>
+<td></td>
+<td>Energieeffizienzklasse (A+++,A++,A+, A, B, C, D, E, F oder G)</td>
+</tr>
+<tr>
+<td><a name="field170">170</a></td>
+<td>FO</td>
+<td>envkv_benzin_sorte</td>
+<td></td>
+<td>Bei Treibstoffart Benzin: die den Verbrauchsangaben zugrundeliegende Benzinsorte (NORMAL, SUPER oder SUPER_PLUS)</td>
+</tr>
+<tr>
+<td><a name="field171">171</a></td>
+<td>FP</td>
+<td>elektrische seitenspiegel</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field172">172</a></td>
+<td>FQ</td>
+<td>sportfahrwerk</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field173">173</a></td>
+<td>FR</td>
+<td>sportpaket</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field174">174</a></td>
+<td>FS</td>
+<td>bluetooth</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field175">175</a></td>
+<td>FT</td>
+<td>bordcomputer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field176">176</a></td>
+<td>FU</td>
+<td>cd spieler</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">177</a></td>
+<td>FV</td>
+<td>elektrische sitzeinstellung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field178">178</a></td>
+<td>FW</td>
+<td>head-up display</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field179">179</a></td>
+<td>FX</td>
+<td>freisprecheinrichtung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field180">180</a></td>
+<td>FY</td>
+<td>mp3 schnittstelle</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field181">181</a></td>
+<td>FZ</td>
+<td>multifunktionslenkrad</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field182">182</a></td>
+<td>GA</td>
+<td>skisack</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field183">183</a></td>
+<td>GB</td>
+<td>tuner oder radio</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field184">184</a></td>
+<td>GC</td>
+<td>sportsitze</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field185">185</a></td>
+<td>GD</td>
+<td>panorama dach</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field186">186</a></td>
+<td>GE</td>
+<td>kindersitzbefestigung (ISOFIX)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field187">187</a></td>
+<td>GF</td>
+<td>kurvenlicht</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field188">188</a></td>
+<td>GG</td>
+<td>lichtsensor</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field189">189</a></td>
+<td>GH</td>
+<td>nebelscheinwerfer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field190">190</a></td>
+<td>GI</td>
+<td>tagfahrlicht</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field191">191</a></td>
+<td>GJ</td>
+<td>traktionskontrolle</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field192">192</a></td>
+<td>GK</td>
+<td>start stop automatik</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field193">193</a></td>
+<td>GL</td>
+<td>regensensor</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field194">194</a></td>
+<td>GM</td>
+<td>nichtraucher fahrzeug</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field195">195</a></td>
+<td>GN</td>
+<td>dachreling</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field196">196</a></td>
+<td>GO</td>
+<td>unfallfahrzeug</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja). Siehe auch <a href="https://services.mobile.de/manual/damage.html">Tabelle Beschädigungen</a>.</td>
+</tr>
+<tr>
+<td><a name="field197">197</a></td>
+<td>GP</td>
+<td>fahrtauglich</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja). Siehe auch <a href="https://services.mobile.de/manual/damage.html">Tabelle Beschädigungen</a>.</td>
+</tr>
+<tr>
+<td><a name="field198">198</a></td>
+<td>GQ</td>
+<td>produktionsdatum</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field199">199</a></td>
+<td>GR</td>
+<td>einparkhilfe sensoren vorne</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field200">200</a></td>
+<td>GS</td>
+<td>einparkhilfe sensoren hinten</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field201">201</a></td>
+<td>GT</td>
+<td>einparkhilfe kamera</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field202">202</a></td>
+<td>GU</td>
+<td>einparkhilfe selbstlenkendes system</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field203">203</a></td>
+<td>GV</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field204">204</a></td>
+<td>GW</td>
+<td>rotstiftpreis</td>
+<td></td>
+<td>'0'=nicht gebucht; '1'=gebucht; NULL keine Änderung des aktuellen Wertes</td>
+</tr>
+<tr>
+<td><a name="field205">205</a></td>
+<td>GX</td>
+<td>ebayk export</td>
+<td></td>
+<td>'0'=nicht gebucht; '1'=gebucht; NULL keine Änderung des aktuellen Wertes</td>
+</tr>
+<tr>
+<td><a name="field206">206</a></td>
+<td>GY</td>
+<td>plugin hybrid</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">207</a></td>
+<td>GZ</td>
+<td>kombinierter stromverbrauch</td>
+<td></td>
+<td>Kombinierter Stromverbrauch auch für Plugin-Hybrid Autos in kWh/100km. Pflichtfeld, wenn 95 = ja und 206 = ja</td>
+</tr>
+<tr>
+<td><a name="field208">208</a></td>
+<td>HA</td>
+<td>highlight 1</td>
+<td></td>
+<td>Text (Feldgröße max. 22 Zeichen), <a href="http://services.mobile.de/manual/new-seller-api.html#_retrieve_a_single_seller">mögliche Anzahl an Highlights abfragen</a></td>
+</tr>
+<tr>
+<td><a name="field209">209</a></td>
+<td>HB</td>
+<td>highlight 2</td>
+<td></td>
+<td>Text (Feldgröße max. 22 Zeichen), <a href="http://services.mobile.de/manual/new-seller-api.html#_retrieve_a_single_seller">mögliche Anzahl an Highlights abfragen</a></td>
+</tr>
+<tr>
+<td><a name="field210">210</a></td>
+<td>HC</td>
+<td>highlight 3</td>
+<td></td>
+<td>Text (Feldgröße max. 22 Zeichen), <a href="http://services.mobile.de/manual/new-seller-api.html#_retrieve_a_single_seller">mögliche Anzahl an Highlights abfragen</a></td>
+</tr>
+<tr>
+<td><a name="field211">211</a></td>
+<td>HD</td>
+<td>bedingungen finanzierungsvorschlag</td>
+<td></td>
+<td>Bedingungen Finanzierungsvorschlag, Weitere Bedingungen, Text (Feldgröße max. 60 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">212</a></td>
+<td>HE</td>
+<td>scheinwerferreinigungsanlage</td>
+<td></td>
+<td>
+          '0', '1' (0=nein, 1=ja) <a href="#fnote4"><sup>6</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">213</a></td>
+<td>HF</td>
+<td>fernlichtassistent</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">214</a></td>
+<td>HG</td>
+<td>ambientes licht</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">215</a></td>
+<td>HH</td>
+<td>sitzheizung hinten</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">216</a></td>
+<td>HI</td>
+<td>elektrische sitzeinstellung hinten</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">217</a></td>
+<td>HJ</td>
+<td>raucherpaket</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">218</a></td>
+<td>HK</td>
+<td>umklappbarer beifahrersitz</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">219</a></td>
+<td>HL</td>
+<td>volldigitales kombiinstrument</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">220</a></td>
+<td>HM</td>
+<td>winterpaket</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">221</a></td>
+<td>HN</td>
+<td>android auto</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">222</a></td>
+<td>HO</td>
+<td>apple carplay</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">223</a></td>
+<td>HP</td>
+<td>induktionsladen smartphones</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">224</a></td>
+<td>HQ</td>
+<td>musikstreaming integriert</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">225</a></td>
+<td>HR</td>
+<td>w-lan</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">226</a></td>
+<td>HS</td>
+<td>reifen-allwetterreifen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">227</a></td>
+<td>HT</td>
+<td>reifen-sommerreifen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">228</a></td>
+<td>HU</td>
+<td>reifen-winterreifen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">229</a></td>
+<td>HV</td>
+<td>notrad</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">230</a></td>
+<td>HW</td>
+<td>pannenkitt</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">231</a></td>
+<td>HX</td>
+<td>reserverad</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">232</a></td>
+<td>HY</td>
+<td>stahlfelge</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">233</a></td>
+<td>HZ</td>
+<td>e-fahrzeug-batterie-fehlt</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">234</a></td>
+<td>IA</td>
+<td>e-fahrzeug-batterie-gekauft</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">235</a></td>
+<td>IB</td>
+<td>e-fahrzeug-batterie-gemietet</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">236</a></td>
+<td>IC</td>
+<td>range extender</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">237</a></td>
+<td>ID</td>
+<td>isofix beifahrer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">238</a></td>
+<td>IE</td>
+<td>gepäckraumabtrennung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">239</a></td>
+<td>IF</td>
+<td>anhängerkupplung schwenkbar</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">240</a></td>
+<td>IG</td>
+<td>anhängerkupplung abnehmbar</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">241</a></td>
+<td>IH</td>
+<td>anhängerkupplung starr</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">242</a></td>
+<td>II</td>
+<td>schiebetür rechts</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">243</a></td>
+<td>IJ</td>
+<td>schiebetür links</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">244</a></td>
+<td>IK</td>
+<td>schiebetür beidseitig</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">245</a></td>
+<td>IL</td>
+<td>bi-xenon-licht</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">246</a></td>
+<td>IM</td>
+<td>laserlicht-scheinwerfer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">247</a></td>
+<td>IN</td>
+<td>alarmanlage</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">248</a></td>
+<td>IO</td>
+<td>beheizbares lenkrad</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">249</a></td>
+<td>IP</td>
+<td>innenspiegel automatisch abbl.</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">250</a></td>
+<td>IQ</td>
+<td>spurhalteassistent</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">251</a></td>
+<td>IR</td>
+<td>abstandstempomat</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">252</a></td>
+<td>IS</td>
+<td>led-scheinwerfer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">253</a></td>
+<td>IT</td>
+<td>notbremsassistent</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">254</a></td>
+<td>IU</td>
+<td>abstandswarner</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">255</a></td>
+<td>IV</td>
+<td>spurwechselassistent</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">256</a></td>
+<td>IW</td>
+<td>sitzbelüftung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">257</a></td>
+<td>IX</td>
+<td>mittelarmlehne</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">258</a></td>
+<td>IY</td>
+<td>beheizbare frontscheibe</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">259</a></td>
+<td>IZ</td>
+<td>berganfahrassistent</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">260</a></td>
+<td>JA</td>
+<td>dab-radio</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">261</a></td>
+<td>JB</td>
+<td>elektrische heckklappe</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">262</a></td>
+<td>JC</td>
+<td>led-tagfahrlicht</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">263</a></td>
+<td>JD</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field211">264</a></td>
+<td>JE</td>
+<td>lederlenkrad</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">265</a></td>
+<td>JF</td>
+<td>lordosenstütze</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">266</a></td>
+<td>JG</td>
+<td>luftfederung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">267</a></td>
+<td>JH</td>
+<td>massagesitz</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">268</a></td>
+<td>JI</td>
+<td>müdigkeitswarnsystem</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">269</a></td>
+<td>JJ</td>
+<td>nachtsicht-assistent</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">270</a></td>
+<td>JK</td>
+<td>notrufsystem</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">271</a></td>
+<td>JL</td>
+<td>reifendruckkontrollsystem</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">272</a></td>
+<td>JM</td>
+<td>schaltwippen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">273</a></td>
+<td>JN</td>
+<td>schiebetür</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">274</a></td>
+<td>JO</td>
+<td>soundsystem</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">275</a></td>
+<td>JP</td>
+<td>sprachsteuerung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">276</a></td>
+<td>JQ</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field211">277</a></td>
+<td>JR</td>
+<td>touchscreen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">278</a></td>
+<td>JS</td>
+<td>usb</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">279</a></td>
+<td>JT</td>
+<td>verkehrszeichenerkennung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">280</a></td>
+<td>JU</td>
+<td>schlüssellose zentralverriegelung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">281</a></td>
+<td>JV</td>
+<td>klimaautomatik 2 zonen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">282</a></td>
+<td>JW</td>
+<td>klimaautomatik 3 zonen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">283</a></td>
+<td>JX</td>
+<td>klimaautomatik 4 zonen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">284</a></td>
+<td>JY</td>
+<td>einparkhilfe kamera 360</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">285</a></td>
+<td>JZ</td>
+<td>blendfreies fernlicht (matrix)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">286</a></td>
+<td>KA</td>
+<td>dienstwagen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">287</a></td>
+<td>KB</td>
+<td>ehem. preisempfehlung uvp</td>
+<td></td>
+<td>
+          Zahl, Bruttopreis <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">288</a></td>
+<td>KC</td>
+<td>ausstattungslinie</td>
+<td></td>
+<td>Text (Feldgröße max. 50 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">289</a></td>
+<td>KD</td>
+<td>bauart</td>
+<td></td>
+<td>Text (Feldgröße max. 20 Zeichen), Herstellerinterne Baureihenbezeichnung z.B. F20 bei BMW, W220 bei Mercedes-Benz</td>
+</tr>
+<tr>
+<td><a name="field211">290</a></td>
+<td>KE</td>
+<td>hereinnahmedatum</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field211">291</a></td>
+<td>KF</td>
+<td>mobile.de Turboinserat</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">292</a></td>
+<td>KG</td>
+<td>effektiver jahreszins</td>
+<td></td>
+<td>
+          Leasingvorschlag, effektiver Jahreszins <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">293</a></td>
+<td>KH</td>
+<td>monatliche rate</td>
+<td></td>
+<td>Leasingvorschlag, monatliche Rate (Ganzzahl) brutto</td>
+</tr>
+<tr>
+<td><a name="field211">294</a></td>
+<td>KI</td>
+<td>laufzeit</td>
+<td></td>
+<td>Leasingvorschlag, Laufzeit in Monaten (12, 24, 36, 48, 60, 72, 84 oder 96)</td>
+</tr>
+<tr>
+<td><a name="field211">295</a></td>
+<td>KJ</td>
+<td>anzahlung</td>
+<td></td>
+<td>Leasingvorschlag, Anzahlung (Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field211">296</a></td>
+<td>KK</td>
+<td>schlussrate</td>
+<td></td>
+<td>Leasingvorschlag, Schlussrate (Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field211">297</a></td>
+<td>KL</td>
+<td>zielgruppe</td>
+<td></td>
+<td>Leasingvorschlag, Zielgruppe: 1=privat, 2=gewerblich, 3=beides</td>
+</tr>
+<tr>
+<td><a name="field211">298</a></td>
+<td>KM</td>
+<td>laufleistung</td>
+<td></td>
+<td>Leasingvorschlag, Gesamtleasinglaufleistung in km (Ganzzahl) - Achtung nicht per anno wegen Leasingübernahmen</td>
+</tr>
+<tr>
+<td><a name="field211">299</a></td>
+<td>KN</td>
+<td>leasing restwert</td>
+<td></td>
+<td>
+          Leasingvorschlag, Leasing Restwert <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">300</a></td>
+<td>KO</td>
+<td>leasing mehrkilometer</td>
+<td></td>
+<td>
+          Leasingvorschlag, Kosten Leasingmehrkilometer in Cent Brutto z.B. 30.5<a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">301</a></td>
+<td>KP</td>
+<td>leasing minderkilometer</td>
+<td></td>
+<td>
+          Leasingvorschlag, Kosten Leasingminderkilometer in Cent Brutto z.B. 30.5<a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">302</a></td>
+<td>KQ</td>
+<td>anbieterbank</td>
+<td></td>
+<td>Leasingvorschlag, Anbieterbank, Text (Feldgröße max. 150 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">303</a></td>
+<td>KR</td>
+<td>soll-zinssatz</td>
+<td></td>
+<td>
+          Leasingvorschlag, Nominaler Zinssatz <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">304</a></td>
+<td>KS</td>
+<td>art des soll-zinssatzes</td>
+<td></td>
+<td>Leasingvorschlag, Art des nominalen Zinssatzes: 1=gebunden, 2=veränderlich, 3=kombiniert</td>
+</tr>
+<tr>
+<td><a name="field211">305</a></td>
+<td>KT</td>
+<td>bedingungen leasingvorschlag</td>
+<td></td>
+<td>Bedingungen Leasingvorschlag, Weitere Bedingungen, Text (Feldgröße max. 60 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">306</a></td>
+<td>KU</td>
+<td>leasinggesamtbetrag</td>
+<td></td>
+<td>
+          Leasingvorschlag Gesamtbetrag <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">307</a></td>
+<td>KV</td>
+<td>nettokreditbetrag</td>
+<td></td>
+<td>
+          Leasingvorschlag, Nettokreditbetrag <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">308</a></td>
+<td>KW</td>
+<td>schadstoffklassedetail</td>
+<td></td>
+<td>EURO6C, EURO6D_TEMP, EURO6D, EURO6E</td>
+</tr>
+<tr>
+<td><a name="field211">309</a></td>
+<td>KX</td>
+<td>geschwindigkeitsbegrenzungsanlage</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">310</a></td>
+<td>KY</td>
+<td>ekpreis</td>
+<td></td>
+<td>
+          Einkaufspreis in EUR, <a href="#fnote4"><sup>7</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">311</a></td>
+<td>KZ</td>
+<td>instandsetzungskosten</td>
+<td></td>
+<td>
+          Instandsetzungs-/Hereinnahmekosten in EUR kumuliert, netto<a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">312</a></td>
+<td>LA</td>
+<td>mobile.de klicks</td>
+<td></td>
+<td>Gesamtanzahl Nachfrageklicks mobile.de</td>
+</tr>
+<tr>
+<td><a name="field211">313</a></td>
+<td>LB</td>
+<td>co2 emission wltp</td>
+<td></td>
+<td>Ganzzahl in g/km (wird auf 0 gesetzt bei Elektro)</td>
+</tr>
+<tr>
+<td><a name="field211">314</a></td>
+<td>LC</td>
+<td>leads offen</td>
+<td></td>
+<td>Leads, Anzahl in Bearbeitung (Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field211">315</a></td>
+<td>LD</td>
+<td>leads offen bearbeiter</td>
+<td></td>
+<td>Leads, Namen Mitarbeiter Leads in Bearbeitung, Text (Feldgröße max. 150 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">316</a></td>
+<td>LE</td>
+<td>leads offen aktuell</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj'), letzter (aktuellster) Eingang offene Leads</td>
+</tr>
+<tr>
+<td><a name="field211">317</a></td>
+<td>LF</td>
+<td>Lagerplatz</td>
+<td></td>
+<td>Text (Feldgröße max. 50 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">318</a></td>
+<td>LG</td>
+<td>Modellbasis</td>
+<td></td>
+<td>Text (Feldgröße max. 50 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">319</a></td>
+<td>LH</td>
+<td>Modelltext (erweitert)</td>
+<td></td>
+<td>Text (Feldgröße max. 255 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">320</a></td>
+<td>LI</td>
+<td>wltp kraftstoff kombiniert</td>
+<td></td>
+<td>Zahl in l/100km (bei Erdgas in kg/100km, bei reinem elektrischen Motorbetrieb Spalte 405/OP verwenden)</td>
+</tr>
+<tr>
+<td><a name="field211">321</a></td>
+<td>LJ</td>
+<td>Leergewicht</td>
+<td></td>
+<td>Ganzzahl in kg</td>
+</tr>
+<tr>
+<td><a name="field211">322</a></td>
+<td>LK</td>
+<td>Kennzeichen</td>
+<td></td>
+<td>Text (Feldgröße max. 20 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">323</a></td>
+<td>LL</td>
+<td>TwinnerWidget</td>
+<td></td>
+<td>Text (Feldgröße max. 250 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">324</a></td>
+<td>LM</td>
+<td>Leasing Restwertabschlag</td>
+<td></td>
+<td>
+          Leasingvorschlag, Prozentsatz <a href="#fnote4"><sup>4</sup></a>
+</td>
+</tr>
+<tr>
+<td><a name="field211">325</a></td>
+<td>LN</td>
+<td>Modellschlüssel</td>
+<td></td>
+<td>Text (Feldgröße max. 50 Zeichen) Typenschlüssel lt. Hersteller z.B. YC21 bei einem BMW 730d F01</td>
+</tr>
+<tr>
+<td><a name="field211">326</a></td>
+<td>LO</td>
+<td>laufleistung (Finanzierung)</td>
+<td></td>
+<td>Finanzierungsvorschlag, Gesamtlaufleistung in km (Ganzzahl) - Achtung nicht per anno wegen Finanzierungsübernahmen</td>
+</tr>
+<tr>
+<td><a name="field211">327</a></td>
+<td>LP</td>
+<td>mietfahrzeug (aktiv)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">328</a></td>
+<td>LQ</td>
+<td>datum letzter großer kundendienst</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field211">329</a></td>
+<td>LR</td>
+<td>km-Stand letzter großer kundendienst</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen</td>
+</tr>
+<tr>
+<td><a name="field211">330</a></td>
+<td>LS</td>
+<td>datum letzter (kleiner) kundendienst</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field211">331</a></td>
+<td>LT</td>
+<td>km-Stand letzter (kleiner) kundendienst</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen</td>
+</tr>
+<tr>
+<td><a name="field211">332</a></td>
+<td>LU</td>
+<td>datum letzter ölwechsel</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field211">333</a></td>
+<td>LV</td>
+<td>km-Stand letzter ölwechsel</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen</td>
+</tr>
+<tr>
+<td><a name="field211">334</a></td>
+<td>LW</td>
+<td>datum letzter bremsenwechsel</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field211">335</a></td>
+<td>LX</td>
+<td>km-Stand letzter bremsenwechsel</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen</td>
+</tr>
+<tr>
+<td><a name="field211">336</a></td>
+<td>LY</td>
+<td>wltp kraftstoff innenstadt</td>
+<td></td>
+<td>Zahl in l/100km</td>
+</tr>
+<tr>
+<td><a name="field211">337</a></td>
+<td>LZ</td>
+<td>wltp kraftstoff stadtrand</td>
+<td></td>
+<td>Zahl in l/100km</td>
+</tr>
+<tr>
+<td><a name="field211">338</a></td>
+<td>MA</td>
+<td>wltp kraftstoff landstrasse</td>
+<td></td>
+<td>Zahl in l/100km</td>
+</tr>
+<tr>
+<td><a name="field211">339</a></td>
+<td>MB</td>
+<td>wltp kraftstoff autobahn</td>
+<td></td>
+<td>Zahl in l/100km</td>
+</tr>
+<tr>
+<td><a name="field211">340</a></td>
+<td>MC</td>
+<td>kundenauftrag</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">341</a></td>
+<td>MD</td>
+<td>vorlauf</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">342</a></td>
+<td>ME</td>
+<td>kurvenlicht adaptiv</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">343</a></td>
+<td>MF</td>
+<td>aktionscode</td>
+<td></td>
+<td>Text (Feldgröße max. 15 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">344</a></td>
+<td>MG</td>
+<td>schwacke wenr.</td>
+<td></td>
+<td>Text (Feldgröße max. 15 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">345</a></td>
+<td>MH</td>
+<td>dat sd3 aktennummer</td>
+<td></td>
+<td>Text (Feldgröße max. 15 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">346</a></td>
+<td>MI</td>
+<td>leasing sonderkonditionen</td>
+<td></td>
+<td>Text (Feldgröße max. 30 Zeichen - Kombinierbar mit Trenner |) 1=Inzahlungnahmebonus 2=Umweltbonus 3=Umweltprämie 4=Eroberungsprämie 5=Behindertenrabatt 6=Behördenrabatt 7=BW eGutschein 8=NRW Bonus 9=Berlin Bonus</td>
+</tr>
+<tr>
+<td><a name="field211">347</a></td>
+<td>MJ</td>
+<td>ueberfuhrung enthalten</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">348</a></td>
+<td>MK</td>
+<td>zulassung enthalten</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">349</a></td>
+<td>ML</td>
+<td>kfzlieferung enthalten</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field7">350</a></td>
+<td>MM</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">351</a></td>
+<td>MN</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">352</a></td>
+<td>MO</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">353</a></td>
+<td>MP</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">354</a></td>
+<td>MQ</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">355</a></td>
+<td>MR</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">356</a></td>
+<td>MS</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">357</a></td>
+<td>MT</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">358</a></td>
+<td>MU</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">359</a></td>
+<td>MV</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">360</a></td>
+<td>MW</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">361</a></td>
+<td>MX</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">362</a></td>
+<td>MY</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">363</a></td>
+<td>MZ</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">364</a></td>
+<td>NA</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">365</a></td>
+<td>NB</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">366</a></td>
+<td>NC</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">367</a></td>
+<td>ND</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">368</a></td>
+<td>NE</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field7">369</a></td>
+<td>NF</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field211">370</a></td>
+<td>NG</td>
+<td>wartung enthalten</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">371</a></td>
+<td>NH</td>
+<td>verschleiss enthalten</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">372</a></td>
+<td>NI</td>
+<td>garantieende datum</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field211">373</a></td>
+<td>NJ</td>
+<td>auslieferung datum</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field211">374</a></td>
+<td>NK</td>
+<td>leasingmatrix</td>
+<td></td>
+<td>
+          Text (Feldgröße max. 500 Zeichen) <a href="#fnote4"><sup>4</sup></a> - Syntax: rate in eur brutto#monate#km/jahr|rate in eur brutto#monate#km/jahr|... z.B. 350.00#36#10000|375.99#24#15000
+        </td>
+</tr>
+<tr>
+<td><a name="field211">375</a></td>
+<td>NL</td>
+<td>kampagnenident</td>
+<td></td>
+<td>Text (Feldgröße max. 25 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">376</a></td>
+<td>NM</td>
+<td>Wartung pro Monat</td>
+<td></td>
+<td>Leasingvorschlag, Wartung pro Monat in EUR, netto</td>
+</tr>
+<tr>
+<td><a name="field211">377</a></td>
+<td>NN</td>
+<td>Verschleiß pro Monat</td>
+<td></td>
+<td>Leasingvorschlag, Verschleiß pro Monat in EUR, netto</td>
+</tr>
+<tr>
+<td><a name="field211">378</a></td>
+<td>NO</td>
+<td>Wartung &amp; Verschleiß in Kombination pro Monat</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">379</a></td>
+<td>NP</td>
+<td>Haftplficht pro Monat</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">380</a></td>
+<td>NQ</td>
+<td>Haftpflicht SB</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">381</a></td>
+<td>NR</td>
+<td>Vollkasko pro Monat</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">382</a></td>
+<td>NS</td>
+<td>Vollkasko SB</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">383</a></td>
+<td>NT</td>
+<td>KFZ-Lieferung einmalig</td>
+<td></td>
+<td>Leasingvorschlag, Lieferkosten in EUR, netto</td>
+</tr>
+<tr>
+<td><a name="field211">384</a></td>
+<td>NU</td>
+<td>KFZ-Steuer pro Monat in EUR</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">385</a></td>
+<td>NV</td>
+<td>8-fach Bereifung pro Monat in EUR</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">386</a></td>
+<td>NW</td>
+<td>TÜV (HU+AU) pro Monat in EUR</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">387</a></td>
+<td>NX</td>
+<td>Rückgabeversicherung pro Monat in EUR</td>
+<td></td>
+<td>Leasingvorschlag, (NULL = keine Angabe, 0 = inklusive, Betrag = extra)</td>
+</tr>
+<tr>
+<td><a name="field211">388</a></td>
+<td>NY</td>
+<td>Zulassungskosten einmalig</td>
+<td></td>
+<td>Leasingvorschlag, Zulassungskosten in EUR, netto</td>
+</tr>
+<tr>
+<td><a name="field211">389</a></td>
+<td>NZ</td>
+<td>klimaautomatik 5 zonen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">390</a></td>
+<td>OA</td>
+<td>Bafa Bonus (Umweltbonus Leasingmarkt)</td>
+<td></td>
+<td>0 = kein Bonus, Wert &gt; 0 = Bonusbetrag</td>
+</tr>
+<tr>
+<td><a name="field211">391</a></td>
+<td>OB</td>
+<td>Zylinder</td>
+<td></td>
+<td>Anzahl der Zylinder (Positive Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field211">392</a></td>
+<td>OC</td>
+<td>Modelljahr</td>
+<td></td>
+<td>Modelljahr Ganzzahl ohne Trennzeichen (4-stellig)</td>
+</tr>
+<tr>
+<td><a name="field211">393</a></td>
+<td>OD</td>
+<td>Auktionsfahrzeug</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">394</a></td>
+<td>OE</td>
+<td>Vorbesitzername</td>
+<td></td>
+<td>Text (Feldgröße max. 150 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">395</a></td>
+<td>OF</td>
+<td>Twinner 360Grad URL</td>
+<td></td>
+<td>Text (Feldgröße max. 250 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">396</a></td>
+<td>OG</td>
+<td>Versionsschlüssel</td>
+<td></td>
+<td>Text (Feldgröße max. 50 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">397</a></td>
+<td>OH</td>
+<td>Grundfarbe aussen</td>
+<td></td>
+<td>Text (Feldgröße max. 25 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field211">398</a></td>
+<td>OI</td>
+<td>Heckantrieb</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">399</a></td>
+<td>OJ</td>
+<td>Frontantrieb</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">400</a></td>
+<td>OK</td>
+<td>Anzahl Gänge</td>
+<td></td>
+<td>Anzahl der Gänge (Positive Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field211">401</a></td>
+<td>OL</td>
+<td>Lenkrad höhenverstellbar</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field211">402</a></td>
+<td>OM</td>
+<td>Kilometerstand für Börsen</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen</td>
+</tr>
+<tr>
+<td><a name="field177">403</a></td>
+<td>ON</td>
+<td>Aussenspiegel autom. abblendend</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">404</a></td>
+<td>OO</td>
+<td>Bonus berechtigt</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">405</a></td>
+<td>OP</td>
+<td>kombinierter stromverbrauch wltp</td>
+<td></td>
+<td>Kombinierter Stromverbrauch in kWh/100km. (bei reinem elektrischen Motorbetrieb)</td>
+</tr>
+<tr>
+<td><a name="field177">406</a></td>
+<td>OQ</td>
+<td>Vornutzung</td>
+<td></td>
+<td>1=Fahrschule, 2=Taxi, 3=DE-Mietfahrzeug, 4=EU-Mietfahrzeug, 5=EU-Fahrzeug</td>
+</tr>
+<tr>
+<td><a name="field177">407</a></td>
+<td>OR</td>
+<td>DAT Europa Code</td>
+<td></td>
+<td>Text (Feldgröße max. 24 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">408</a></td>
+<td>OS</td>
+<td>Handelsname Lieferant</td>
+<td></td>
+<td>Text (Feldgröße max. 40 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">409</a></td>
+<td>OT</td>
+<td>Reifentypkennung</td>
+<td></td>
+<td>Text (Feldgröße max. 40 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">410</a></td>
+<td>OU</td>
+<td>Reifenbezeichnung</td>
+<td></td>
+<td>Text (Feldgröße max. 40 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">411</a></td>
+<td>OV</td>
+<td>Tragfähigkeitsindex</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen</td>
+</tr>
+<tr>
+<td><a name="field177">412</a></td>
+<td>OW</td>
+<td>Geschwindigkeitsindex</td>
+<td></td>
+<td>Text (Feldgröße max. 2 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">413</a></td>
+<td>OX</td>
+<td>Kraftstoffeffklasse</td>
+<td></td>
+<td>Text (Feldgröße max. 2 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">414</a></td>
+<td>OY</td>
+<td>Nasshaftungsklasse</td>
+<td></td>
+<td>Text (Feldgröße max. 2 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">415</a></td>
+<td>OZ</td>
+<td>Externe Rollgeräuschklasse</td>
+<td></td>
+<td>Text (Feldgröße max. 2 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">416</a></td>
+<td>PA</td>
+<td>Wert externe Rollgeräusch</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen</td>
+</tr>
+<tr>
+<td><a name="field177">417</a></td>
+<td>PB</td>
+<td>reserviert, muss leer sein</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="field177">418</a></td>
+<td>PC</td>
+<td>Extreme Schneeverhältnis geeignet</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">419</a></td>
+<td>PD</td>
+<td>Eisreifen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">420</a></td>
+<td>PE</td>
+<td>Herstellungsbeginn Reifentyp</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field177">421</a></td>
+<td>PF</td>
+<td>Herstellungsende Reifentyp</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field177">422</a></td>
+<td>PG</td>
+<td>Handelsname</td>
+<td></td>
+<td>Text (Feldgröße max. 40 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">423</a></td>
+<td>PH</td>
+<td>Reifenzusatzinfo</td>
+<td></td>
+<td>Text (Feldgröße max. 75 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">424</a></td>
+<td>PI</td>
+<td>Ladeleistung AC</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen, Angaben in kW</td>
+</tr>
+<tr>
+<td><a name="field177">425</a></td>
+<td>PJ</td>
+<td>Ladeleistung DC</td>
+<td></td>
+<td>Ganzzahl ohne Trennzeichen, Angaben in kW</td>
+</tr>
+<tr>
+<td><a name="field177">426</a></td>
+<td>PK</td>
+<td>EU-Reifenregisternummer (vorne)</td>
+<td></td>
+<td>,Text (Feldgröße max. 15 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">427</a></td>
+<td>PL</td>
+<td>Fahrzeug im PKA ignorieren</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">428</a></td>
+<td>PM</td>
+<td>Schlüsselbrettnummer</td>
+<td></td>
+<td>Text (Feldgröße max. 10 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">429</a></td>
+<td>PN</td>
+<td>Teil-Ledscheinwerfer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">430</a></td>
+<td>PO</td>
+<td>Garantie Monate</td>
+<td></td>
+<td>Anzahl der Monate (Positive Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field177">431</a></td>
+<td>PP</td>
+<td>Komfortsitz</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">432</a></td>
+<td>PQ</td>
+<td>Keramikbremse</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">433</a></td>
+<td>PR</td>
+<td>Sicherheitsintegralsitze</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">434</a></td>
+<td>PS</td>
+<td>Akustikverglasung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">435</a></td>
+<td>PT</td>
+<td>Elek. Parkbremse</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">436</a></td>
+<td>PU</td>
+<td>Fahrersitz Höhenverstellbar</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">437</a></td>
+<td>PV</td>
+<td>Rückbank get.umleg.</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">438</a></td>
+<td>PW</td>
+<td>Softclose</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">439</a></td>
+<td>PX</td>
+<td>Bremsbelaganzeige</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">440</a></td>
+<td>PY</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field177">441</a></td>
+<td>PZ</td>
+<td>Audio-Aux-Anschluss</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">442</a></td>
+<td>QA</td>
+<td>iPad/iPod-Anschluss</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">443</a></td>
+<td>QB</td>
+<td>Uhr&amp;Drehzahlm.</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">444</a></td>
+<td>QC</td>
+<td>Allradlenkung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">445</a></td>
+<td>QD</td>
+<td>Außenspiegel el. anklap.</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">446</a></td>
+<td>QE</td>
+<td>Außenspiegel beheizbar</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">447</a></td>
+<td>QF</td>
+<td>Außenspiegel abblend.</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">448</a></td>
+<td>QG</td>
+<td>Dachträger</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">449</a></td>
+<td>QH</td>
+<td>Optikschwarz</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">450</a></td>
+<td>QI</td>
+<td>Privacy Verglasung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">451</a></td>
+<td>QJ</td>
+<td>Sportabgasanlage</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">452</a></td>
+<td>QK</td>
+<td>Wärmeschutzglas</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr></tr>
+<tr>
+<td><a name="field17">453</a></td>
+<td>QL</td>
+<td>AktivKopfstütze</td>
+<td></td>
+<td>'0-2' (0=ohne AktivKopfst., 1=AktivKopfstützen vr, 2=AktivKopfstützen vr+hi)</td>
+</tr>
+<tr>
+<td><a name="field17">454</a></td>
+<td>QM</td>
+<td>autonomes Fahren</td>
+<td></td>
+<td>'0-5' (0=kein autonomes Fahren, 1=autonomes Fahren Level 1, 2=autonomes Fahren Level 2, 3=autonomes Fahren Level 3, 4=autonomes Fahren Level 4, 5=autonomes Fahren Level 5,)</td>
+</tr>
+<tr>
+<td><a name="field177">455</a></td>
+<td>QN</td>
+<td>Modellreihe</td>
+<td></td>
+<td>Text (Feldgröße max. 60 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">456</a></td>
+<td>QO</td>
+<td>Finanzierungsprodukt</td>
+<td></td>
+<td>Text (Feldgröße max. 60 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">457</a></td>
+<td>QP</td>
+<td>Leasingprodukt</td>
+<td></td>
+<td>Text (Feldgröße max. 60 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">458</a></td>
+<td>QQ</td>
+<td>Motorleistung (max)</td>
+<td></td>
+<td>Ganzzahl, gibt max. KW-Leistung des Fahrzeugs an</td>
+</tr>
+<tr>
+<td><a name="field177">459</a></td>
+<td>QR</td>
+<td>Batteriespannung</td>
+<td></td>
+<td>Ganzzahl, Einheit: Volt</td>
+</tr>
+<tr>
+<td><a name="field177">460</a></td>
+<td>QS</td>
+<td>Batteriekapazität</td>
+<td></td>
+<td>Ganzzahl, Einheit: kWh</td>
+</tr>
+<tr>
+<td><a name="field177">461</a></td>
+<td>QT</td>
+<td>Batteriebauart</td>
+<td></td>
+<td>'0-2' (0=Lithium-Ionen, 1=Lithium-Polymer, 2=Nickelmetallhybrid)</td>
+</tr>
+<tr>
+<td><a name="field177">462</a></td>
+<td>QU</td>
+<td></td>
+<td></td>
+<td>reserviert, muss leer sein</td>
+</tr>
+<tr>
+<td><a name="field177">463</a></td>
+<td>QV</td>
+<td>Quickdrop-System</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">464</a></td>
+<td>QW</td>
+<td>Standardladung</td>
+<td></td>
+<td>Ganzzahl, Einheit: Volt</td>
+</tr>
+<tr>
+<td><a name="field177">465</a></td>
+<td>QX</td>
+<td>Ladedauer bei Standardladung (AC) (Wallbox/Ladestation)</td>
+<td></td>
+<td>Einheit: hh:mm</td>
+</tr>
+<tr>
+<td><a name="field177">466</a></td>
+<td>QY</td>
+<td>Schnellladung</td>
+<td></td>
+<td>Ganzzahl, Einheit: Volt</td>
+</tr>
+<tr>
+<td><a name="field177">467</a></td>
+<td>QZ</td>
+<td>Ladedauer bei Schnellladung (DC) (Wallbox/Ladestation)</td>
+<td></td>
+<td>Einheit: hh:mm</td>
+</tr>
+<tr>
+<td><a name="field177">468</a></td>
+<td>RA</td>
+<td>Elektromotor-Reichweite nach WLTP</td>
+<td></td>
+<td>Einheit: km</td>
+</tr>
+<tr>
+<td><a name="field177">469</a></td>
+<td>RB</td>
+<td>Elektromotor-Reichweite innerorts nach WLTP</td>
+<td></td>
+<td>Einheit: km</td>
+</tr>
+<tr>
+<td><a name="field177">470</a></td>
+<td>RC</td>
+<td>Gesamtreichweite nach WLTP</td>
+<td></td>
+<td>Einheit: km</td>
+</tr>
+<tr>
+<td><a name="field177">471</a></td>
+<td>RD</td>
+<td>Gesamtreichweite innerorts nach WLTP</td>
+<td></td>
+<td>Einheit: km</td>
+</tr>
+<tr>
+<td><a name="field177">472</a></td>
+<td>RE</td>
+<td>MobileAD-ID</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field177">473</a></td>
+<td>RF</td>
+<td>Gewichtete kombinierte CO2-Emissionen WLTP</td>
+<td></td>
+<td>Ganzzahl in g/km (Nur für Hybrid-Plugin)</td>
+</tr>
+<tr>
+<td><a name="field177">474</a></td>
+<td>RG</td>
+<td>Gewichteter kombinierter Stromverbrauch WLTP</td>
+<td></td>
+<td>Kombinierter Stromverbrauch in kWh/100km. (Nur für Hybrid-Plugin)</td>
+</tr>
+<tr>
+<td><a name="field177">475</a></td>
+<td>RH</td>
+<td>Gewichteter kombinierter Kraftstoffverbrauch WLTP</td>
+<td></td>
+<td>Zahl in l/100km (bei Erdgas in kg/100km, bei Elektro in kWh/100km) (Nur für Hybrid-Plugin)</td>
+</tr>
+<tr>
+<td><a name="field177">476</a></td>
+<td>RI</td>
+<td>Mängelhinweis/Unfallinfo</td>
+<td></td>
+<td>Text</td>
+</tr>
+<tr>
+<td><a name="field177">477</a></td>
+<td>RJ</td>
+<td>Hinweis Leasingangebot</td>
+<td></td>
+<td>Text (Feldgröße max. 400 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">478</a></td>
+<td>RK</td>
+<td>Hinweis Finanzierungsangebot</td>
+<td></td>
+<td>Text (Feldgröße max. 400 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">479</a></td>
+<td>RL</td>
+<td>EU-Reifenregisternummer (hinten)</td>
+<td></td>
+<td>,Text (Feldgröße max. 15 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">480</a></td>
+<td>RM</td>
+<td>Homepage Exklusiv</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">481</a></td>
+<td>RN</td>
+<td>Youngtimer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">482</a></td>
+<td>RO</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field177">483</a></td>
+<td>RP</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field177">484</a></td>
+<td>RQ</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field177">485</a></td>
+<td>RR</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field177">486</a></td>
+<td>RS</td>
+<td>abo standort</td>
+<td></td>
+<td>Text (Feldgröße max. 30 Zeichen) z.B. DE-33602 Bielefeld</td>
+</tr>
+<tr>
+<td><a name="field177">487</a></td>
+<td>RT</td>
+<td>abo mindestalter in jahre</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field177">488</a></td>
+<td>RU</td>
+<td>abo selbstbeteiligung</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field177">489</a></td>
+<td>RV</td>
+<td>abo kaution</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field177">490</a></td>
+<td>RW</td>
+<td>abo vertragsbedingungen</td>
+<td></td>
+<td>Text (Feldgröße max. 400 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">491</a></td>
+<td>RX</td>
+<td>abo mehrkm</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field177">492</a></td>
+<td>RY</td>
+<td>abo verfuegbarkeit</td>
+<td></td>
+<td>'0-3' (0=k.Angaben, 1=sofort, 2=Innerhalb 14 Tage, 3=innerhalb 4 Wochen, 4=mehr als 4 Wochen)</td>
+</tr>
+<tr>
+<td><a name="field177">493</a></td>
+<td>RZ</td>
+<td>abo lieferdatum</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field177">494</a></td>
+<td>SA</td>
+<td>abo lieferfrist in tagen</td>
+<td></td>
+<td>'0-360' (0=k.Angaben, erlaubte Werte: 1, 2, 3, 4, 5, 6, 7, 14, 42, 60, 90, 120, 150, 180, 270 und 360. lieferdatum (492/RY) und lieferfrist (493/RZ) dürfen nicht gleichzeitig angegeben werden.)</td>
+</tr>
+<tr>
+<td><a name="field177">495</a></td>
+<td>SB</td>
+<td>abo lieferoptionen</td>
+<td></td>
+<td>Text max. 100 Zeichen (z.B. Abholung|Anlieferung)</td>
+</tr>
+<tr>
+<td><a name="field177">496</a></td>
+<td>SC</td>
+<td>abo lieferkosten</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field177">497</a></td>
+<td>SD</td>
+<td>abo lieferkosten matrix</td>
+<td></td>
+<td>Text (Feldgröße max. 500 Zeichen) 4 - Syntax: rate in eur brutto#monate#km/jahr|rate in eur brutto#monate#km/jahr|... z.B. 350.00#36#10000|375.99#24#15000</td>
+</tr>
+<tr>
+<td><a name="field177">498</a></td>
+<td>SE</td>
+<td>abo bemerkung</td>
+<td></td>
+<td>Text max. 500 Zeichen</td>
+</tr>
+<tr>
+<td><a name="field177">499</a></td>
+<td>SF</td>
+<td>abo highlight</td>
+<td></td>
+<td>Text max. 60 Zeichen</td>
+</tr>
+<tr>
+<td><a name="field177">500</a></td>
+<td>SG</td>
+<td>abo toptags</td>
+<td></td>
+<td>Text max. 60 Zeichen - (Trenner ",")</td>
+</tr>
+<tr>
+<td><a name="field177">501</a></td>
+<td>SH</td>
+<td>abo zahlungsbedingungen</td>
+<td></td>
+<td>'0-3' (0=k.Angaben, 1=Kreditkarte, 2=Bezahl.de, 3=Bankeinzug)</td>
+</tr>
+<tr>
+<td><a name="field177">502</a></td>
+<td>SI</td>
+<td>abo rate</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field177">503</a></td>
+<td>SJ</td>
+<td>abo rate matrix</td>
+<td></td>
+<td>Text (Feldgröße max. 500 Zeichen) 4 - Syntax: rate in eur brutto#monate#km/jahr|rate in eur brutto#monate#km/jahr|... z.B. 350.00#36#10000|375.99#24#15000</td>
+</tr>
+<tr>
+<td><a name="field177">504</a></td>
+<td>SK</td>
+<td>abo startgebuehr</td>
+<td></td>
+<td>Ganzzahl</td>
+</tr>
+<tr>
+<td><a name="field177">505</a></td>
+<td>SL</td>
+<td>abo teaser detailpage</td>
+<td></td>
+<td>BildURL für Teaseranzeige Homeapge (inkl. https)</td>
+</tr>
+<tr>
+<td><a name="field177">506</a></td>
+<td>SM</td>
+<td>interner identifier</td>
+<td></td>
+<td>Text (Feldgröße max. 30 Zeichen) - dient als Ergänzung für Feld 1 (B)</td>
+</tr>
+<tr>
+<td><a name="field177">507</a></td>
+<td>SN</td>
+<td>freigabe internetveröffentlichung</td>
+<td></td>
+<td>'0', '1' (0=für Veröffentlichung freigegeben, 1= für Veröffentlichung gesperrt)</td>
+</tr>
+<tr>
+<td><a name="field177">508</a></td>
+<td>SO</td>
+<td>anzahl bilder</td>
+<td></td>
+<td>Anzahl der Bilder die im Export enthalten sind (Positive Ganzzahl)</td>
+</tr>
+<tr>
+<td><a name="field177">509</a></td>
+<td>SP</td>
+<td>wärmepumpe</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field177">510</a></td>
+<td>SQ</td>
+<td>einkäufer</td>
+<td></td>
+<td>Text max. 100 Zeichen</td>
+</tr>
+<tr>
+<td><a name="field177">511</a></td>
+<td>SR</td>
+<td>interne informationen</td>
+<td></td>
+<td>Text (Feldgröße max. 500 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field177">512</a></td>
+<td>SS</td>
+<td>onlinekauf</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field169">513</a></td>
+<td>ST</td>
+<td>co2-klasse (wltp)</td>
+<td></td>
+<td>(A, B, C, D, E, F oder G)</td>
+</tr>
+<tr>
+<td><a name="field169">514</a></td>
+<td>SU</td>
+<td>co2-Klasse (wltp) gewichtet, kombiniert</td>
+<td></td>
+<td>(A, B, C, D, E, F oder G)</td>
+</tr>
+<tr>
+<td><a name="field169">515</a></td>
+<td>SV</td>
+<td>co2-klasse (wltp) bei entladener Batterie</td>
+<td></td>
+<td>(A, B, C, D, E, F oder G)</td>
+</tr>
+<tr>
+<td><a name="field177">516</a></td>
+<td>SW</td>
+<td>co2-emissionen (wltp) bei entladener batterie</td>
+<td></td>
+<td>Ganzzahl in g/km (Nur für Hybrid-Plugin)</td>
+</tr>
+<tr>
+<td><a name="field177">517</a></td>
+<td>SX</td>
+<td>kombinierter kraftstoffverbrauch (wltp) entl. batterie</td>
+<td></td>
+<td>Zahl in l/100km (bei Erdgas in kg/100km) (Nur für Hybrid-Plugin)</td>
+</tr>
+<tr>
+<td><a name="field177">518</a></td>
+<td>SY</td>
+<td>state of health (soh) in % (batteriezustand)</td>
+<td></td>
+<td>Ganzahl</td>
+</tr>
+<tr>
+<td><a name="field177">519</a></td>
+<td>SZ</td>
+<td>musterfahrzeug / virtuelles fahrzeug</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">520</a></td>
+<td>TA</td>
+<td>stromverbrauch innenstadt wltp</td>
+<td></td>
+<td>Stromverbrauch Innenstadt in kWh/100km.</td>
+</tr>
+<tr>
+<td><a name="field207">521</a></td>
+<td>TB</td>
+<td>stromverbrauch stadtrand wltp</td>
+<td></td>
+<td>Stromverbrauch Stadtrand in kWh/100km.</td>
+</tr>
+<tr>
+<td><a name="field207">522</a></td>
+<td>TC</td>
+<td>stromverbrauch landstrasse wltp</td>
+<td></td>
+<td>Stromverbrauch Landstrasse in kWh/100km.</td>
+</tr>
+<tr>
+<td><a name="field207">523</a></td>
+<td>TD</td>
+<td>stromverbrauch autobahn wltp</td>
+<td></td>
+<td>Stromverbrauch Autobahn in kWh/100km.</td>
+</tr>
+<tr>
+<td><a name="field207">524</a></td>
+<td>TE</td>
+<td>verbrauch entladener batterie innenstadt wltp</td>
+<td></td>
+<td>Zahl in l/100km</td>
+</tr>
+<tr>
+<td><a name="field207">525</a></td>
+<td>TF</td>
+<td>verbrauch entladener batterie stadtrand wltp</td>
+<td></td>
+<td>Zahl in l/100km</td>
+</tr>
+<tr>
+<td><a name="field207">526</a></td>
+<td>TG</td>
+<td>verbrauch entladener batterie landstrasse wltp</td>
+<td></td>
+<td>Zahl in l/100km</td>
+</tr>
+<tr>
+<td><a name="field207">527</a></td>
+<td>TH</td>
+<td>verbrauch entladener batterie autobahn wltp</td>
+<td></td>
+<td>Zahl in l/100km</td>
+</tr>
+<tr>
+<td><a name="field207">528</a></td>
+<td>TI</td>
+<td>link pkwlabel</td>
+<td></td>
+<td>URL (max. 1.000 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field207">529</a></td>
+<td>TJ</td>
+<td>mittlerer co2 preis pro t</td>
+<td></td>
+<td>Zahl in € pro Tonne (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">530</a></td>
+<td>TK</td>
+<td>mittlerer co2 preis akkumuliert</td>
+<td></td>
+<td>Zahl in € (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">531</a></td>
+<td>TL</td>
+<td>niedriger co2 preis pro t</td>
+<td></td>
+<td>Zahl in € pro Tonne (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">532</a></td>
+<td>TM</td>
+<td>niedriger co2 preis akkumuliert</td>
+<td></td>
+<td>Zahl in € (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">533</a></td>
+<td>TN</td>
+<td>hoher co2 preis pro tonne</td>
+<td></td>
+<td>Zahl in € pro Tonne (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">534</a></td>
+<td>TO</td>
+<td>hoher co2 preis akkumuliert</td>
+<td></td>
+<td>Zahl in € (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">535</a></td>
+<td>TP</td>
+<td>kraftstoffpreis (referenz)</td>
+<td></td>
+<td>Zahl in €/l (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">536</a></td>
+<td>TQ</td>
+<td>strompreis</td>
+<td></td>
+<td>Zahl in €/kWh z.B. 0.42</td>
+</tr>
+<tr>
+<td><a name="field207">537</a></td>
+<td>TR</td>
+<td>jahr der energiekosten bei 15.000 km jahresfahrleistung</td>
+<td></td>
+<td>Ganzzahl (YYYY)</td>
+</tr>
+<tr>
+<td><a name="field207">538</a></td>
+<td>TS</td>
+<td>energiekosten bei 15.000 km jahresfahrleistung</td>
+<td></td>
+<td>Zahl in € (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">539</a></td>
+<td>TT</td>
+<td>kfzsteuer p.a.</td>
+<td></td>
+<td>Zahl in € (max. 2 Nachkommastellen)</td>
+</tr>
+<tr>
+<td><a name="field207">540</a></td>
+<td>TU</td>
+<td>zeitrahmen (von) co2 kosten</td>
+<td></td>
+<td>Ganzzahl (YYYY)</td>
+</tr>
+<tr>
+<td><a name="field207">541</a></td>
+<td>TV</td>
+<td>zeitrahmen (bis) co2 kosten</td>
+<td></td>
+<td>Ganzzahl (YYYY)</td>
+</tr>
+<tr>
+<td><a name="field207">542</a></td>
+<td>TW</td>
+<td>URL KFZ-Detailseite</td>
+<td></td>
+<td>Text (Feldgröße max. 200 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field207">543</a></td>
+<td>TX</td>
+<td>KFZ-Ansprechpartner Email</td>
+<td></td>
+<td>Text (Feldgröße max. 200 Zeichen)</td>
+</tr>
+<tr>
+<td><a name="field207">544</a></td>
+<td>TY</td>
+<td>Letzte Wartung Datum</td>
+<td></td>
+<td>Datumsangabe (Format='tt.mm.jjjj')</td>
+</tr>
+<tr>
+<td><a name="field207">545</a></td>
+<td>TZ</td>
+<td>Letzte Wartung KM</td>
+<td></td>
+<td>Ganzzahl in km</td>
+</tr>
+<tr>
+<td><a name="field207">546</a></td>
+<td>UA</td>
+<td>Anhängelast gebremst</td>
+<td></td>
+<td>Ganzzahl in kg (max. 9999)</td>
+</tr>
+<tr>
+<td><a name="field207">547</a></td>
+<td>UB</td>
+<td>Anhängelast ungebremst</td>
+<td></td>
+<td>Ganzzahl in kg (max. 9999)</td>
+</tr>
+<tr>
+<td><a name="field207">548</a></td>
+<td>UC</td>
+<td>Stützlast AHK</td>
+<td></td>
+<td>Ganzzahl in kg (max. 999)</td>
+</tr>
+<tr>
+<td><a name="field207">549</a></td>
+<td>UD</td>
+<td>Tankgröße</td>
+<td></td>
+<td>Ganzzahl in Liter (max. 9999)</td>
+</tr>
+<tr>
+<td><a name="field207">550</a></td>
+<td>UE</td>
+<td>Batteriezertifikat vorhanden</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">551</a></td>
+<td>UF</td>
+<td>Virtuelle Seitenspiegel</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">552</a></td>
+<td>UG</td>
+<td>Service neu</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">553</a></td>
+<td>UH</td>
+<td>Navigationsvorbereitung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">554</a></td>
+<td>UI</td>
+<td>Farbe matt</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">555</a></td>
+<td>UJ</td>
+<td>Rechtslenker</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">556</a></td>
+<td>UK</td>
+<td>Bidirektionales Laden</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">557</a></td>
+<td>UL</td>
+<td>Faltdach</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">558</a></td>
+<td>UM</td>
+<td>Elektr. Sitzeinstellung Memory-Funktion</td>
+<td></td>
+<td>'0-3' (0=k.Angaben, 1=Fahrersitz, 2=Fahrer + Beifahrersitz)</td>
+</tr>
+<tr>
+<td><a name="field207">559</a></td>
+<td>UN</td>
+<td>Ausparkassistent</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">560</a></td>
+<td>UO</td>
+<td>Adaptives Fahrwerk</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">561</a></td>
+<td>UP</td>
+<td>Anhängerrangierassistent</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">562</a></td>
+<td>UQ</td>
+<td>Vorbereitung Anhängerkupplung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">563</a></td>
+<td>UR</td>
+<td>Sitzhöhe (Motorrad)</td>
+<td></td>
+<td>Ganzzahl in mm (max. 999)</td>
+</tr>
+<tr>
+<td><a name="field207">564</a></td>
+<td>US</td>
+<td>Reichweite (Motorrad)</td>
+<td></td>
+<td>Ganzzahl in km</td>
+</tr>
+<tr>
+<td><a name="field207">565</a></td>
+<td>UT</td>
+<td>Stoppie-Control (Motorrad)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">566</a></td>
+<td>UU</td>
+<td>Wheelie-Control (Motorrad)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">567</a></td>
+<td>UV</td>
+<td>Kurven-ABS (Motorrad)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">568</a></td>
+<td>UW</td>
+<td>Schaltautomat (Motorrad)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">569</a></td>
+<td>UX</td>
+<td>Blipper (Motorrad)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">570</a></td>
+<td>UY</td>
+<td>Griffheizung (Motorrad)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">571</a></td>
+<td>UZ</td>
+<td>Semi-aktives Fahrwerk (Motorrad)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">572</a></td>
+<td>VA</td>
+<td>Drossel (Motorrad)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">573</a></td>
+<td>VB</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field207">574</a></td>
+<td>VC</td>
+<td>Stehhöhe (Wohnmobile)</td>
+<td></td>
+<td>Ganzzahl in cm (max. 299)</td>
+</tr>
+<tr>
+<td><a name="field207">575</a></td>
+<td>VD</td>
+<td>SAT-Anlage (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">576</a></td>
+<td>VE</td>
+<td>Fahrradträger (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">577</a></td>
+<td>VF</td>
+<td>Rangierhilfe (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">578</a></td>
+<td>VG</td>
+<td>Warmwasser (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">579</a></td>
+<td>VH</td>
+<td></td>
+<td></td>
+<td><strong>reserviert, muss leer sein</strong></td>
+</tr>
+<tr>
+<td><a name="field207">580</a></td>
+<td>VI</td>
+<td>Queensize Bett (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">581</a></td>
+<td>VJ</td>
+<td>Französisches Bett (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">582</a></td>
+<td>VK</td>
+<td>Einzelbett (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">583</a></td>
+<td>VL</td>
+<td>Doppelbett hinten (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">584</a></td>
+<td>VM</td>
+<td>Doppelbett vorne (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">585</a></td>
+<td>VN</td>
+<td>Hubbetten (Klapp) (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">586</a></td>
+<td>VO</td>
+<td>Aufstelldach-Doppelbett (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">587</a></td>
+<td>VP</td>
+<td>Sitz Umbaubett (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">588</a></td>
+<td>VQ</td>
+<td>Sitzgruppe L-Form (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">589</a></td>
+<td>VR</td>
+<td>Sitzgruppe Bar Form (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">590</a></td>
+<td>VS</td>
+<td>Heizung Gas (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">591</a></td>
+<td>VT</td>
+<td>Heizung Diesel (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">592</a></td>
+<td>VU</td>
+<td>Heizung Benzin (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">593</a></td>
+<td>VV</td>
+<td>Heizung Strom (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">594</a></td>
+<td>VW</td>
+<td>Heizung Holz (Wohnmobile)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">595</a></td>
+<td>VX</td>
+<td>Länge Typ (NFZ)</td>
+<td></td>
+<td>Text (mögliche Werte: L1, L2, L3, L4, L5)</td>
+</tr>
+<tr>
+<td><a name="field207">596</a></td>
+<td>VY</td>
+<td>Höhe Typ (NFZ)</td>
+<td></td>
+<td>Text (mögliche Werte: H1, H2, H3)</td>
+</tr>
+<tr>
+<td><a name="field207">597</a></td>
+<td>VZ</td>
+<td>Radstand (Typ)</td>
+<td></td>
+<td>Text (mögliche Werte: SHORT, MIDDLE, LONG, EXTRA_LONG)</td>
+</tr>
+<tr>
+<td><a name="field207">598</a></td>
+<td>WA</td>
+<td>Lenkachse</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field207">599</a></td>
+<td>WB</td>
+<td>Betriebsgewicht</td>
+<td></td>
+<td>Ganzzahl in kg (max. 999.999)</td>
+</tr>
+<tr>
+<td><a name="field600">600</a></td>
+<td>WC</td>
+<td>Colorverglasung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field601">601</a></td>
+<td>WD</td>
+<td>Nackenheizung (AIRSCARF)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field602">602</a></td>
+<td>WE</td>
+<td>Tuning</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field603">603</a></td>
+<td>WF</td>
+<td>Waschwasserstandsanzeige</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field604">604</a></td>
+<td>WG</td>
+<td>Windschott (Cabrio)</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field605">605</a></td>
+<td>WH</td>
+<td>Zentralverriegelung mit Funk</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field606">606</a></td>
+<td>WI</td>
+<td>Batterieladung Steckertyp</td>
+<td></td>
+<td>'0-8' (0=k.Angaben, 1=Schuko, 2=Typ 1, 3=Typ 2, 4=Combo (CCS), 5=CHAdeMO, 6=Typ 1 + CHAdeMO, 7=Typ 2 + CHAdeMO, 8=TESLA_SC)</td>
+</tr>
+<tr>
+<td><a name="field607">607</a></td>
+<td>WJ</td>
+<td>Batterie-Garantie</td>
+<td></td>
+<td>Ganzzahl in Monate</td>
+</tr>
+<tr>
+<td><a name="field608">608</a></td>
+<td>WK</td>
+<td>Felgengröße</td>
+<td></td>
+<td>Ganzzahl in Zoll</td>
+</tr>
+<tr>
+<td><a name="field609">609</a></td>
+<td>WL</td>
+<td>Zulässiges Gesamtgewicht</td>
+<td></td>
+<td>Ganzzahl in KG</td>
+</tr>
+<tr>
+<td><a name="field610">610</a></td>
+<td>WM</td>
+<td>Radstand</td>
+<td></td>
+<td>Ganzzahl in MM</td>
+</tr>
+<tr>
+<td><a name="field611">611</a></td>
+<td>WN</td>
+<td>Differentialsperre</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field612">612</a></td>
+<td>WO</td>
+<td>Beifahrer-Doppelsitz</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field613">613</a></td>
+<td>WP</td>
+<td>Holzboden</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja)</td>
+</tr>
+<tr>
+<td><a name="field614">614</a></td>
+<td>WQ</td>
+<td>Drehschemel</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field615">615</a></td>
+<td>WR</td>
+<td>Hochlader</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field616">616</a></td>
+<td>WS</td>
+<td>Innenverkleidung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field617">617</a></td>
+<td>WT</td>
+<td>Ladeboden - Variabel</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field618">618</a></td>
+<td>WU</td>
+<td>Ladedruck &amp; Temperaturanzeigen</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field619">619</a></td>
+<td>WV</td>
+<td>Zusatzscheinwerfer</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field620">620</a></td>
+<td>WW</td>
+<td>Seilwinde</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field621">621</a></td>
+<td>WX</td>
+<td>Tachograf</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field622">622</a></td>
+<td>WY</td>
+<td></td>
+<td></td>
+<td>reserviert, muss leer sein</td>
+</tr>
+<tr>
+<td><a name="field623">623</a></td>
+<td>WZ</td>
+<td>Verkleidung</td>
+<td></td>
+<td>'0', '1' (0=nein, 1=ja), nur Motorräder</td>
+</tr>
+<tr>
+<td><a name="field624">624</a></td>
+<td>XA</td>
+<td>Zuglast AHK</td>
+<td></td>
+<td>'0-4' (0=k.Angaben, 1=2.0t, 2=2.8t, 3=3.5t, 4=2.5t), nur Nutzfahrzeuge</td>
+</tr>
+<tr>
+<td><a name="field625">625</a></td>
+<td>XB</td>
+<td>Anhängerkupplung-NFZ Typ</td>
+<td></td>
+<td>'0-2' (0=k.Angaben, 1=Kugel, 2=Maul)</td>
+</tr>
+<tr>
+<td><a name="field626">626</a></td>
+<td>XC</td>
+<td>Hintertür (Art)</td>
+<td></td>
+<td>'0-6' (0=keine Hecktür, 1=Hecktür, 2=Hecktür 180°, 3=Hecktür 270°, 4=Hecktür 90°, 5=Hecktür 256°, 6=Heckklappe)</td>
+</tr>
+<tr>
+<td><a name="field627">627</a></td>
+<td>XD</td>
+<td>Hochdach (Art)</td>
+<td></td>
+<td>'0-2' (0=keine Hecktür, 1=Hochdach, 2=Superhochdach)</td>
+</tr>
+<tr>
+<td><a name="field39">628</a></td>
+<td>XE</td>
+<td>Zustandsbericht</td>
+<td></td>
+<td>'0-5' (0=k.Angaben, 1=sehr guter Zustand, 2=guter Zustand, 3=normaler Zustand, 4=mangelhafter Zustand, 5=sehr schlechter Zustand)</td>
+</tr>
+<tr>
+<td><a name="field39">629</a></td>
+<td>XF</td>
+<td>Mobile.de Parkungen</td>
+<td></td>
+<td>Anzahl der Parkungen auf mobile.de</td>
+</tr>
+<tr>
+<td><a name="field39">630</a></td>
+<td>XG</td>
+<td>Mobile.de Preisrating</td>
+<td></td>
+<td>0-5 (0=k. Angaben, 1=sehr guter Preis , 2=guter Preis , 3=fairer Preis , 4=erhöhter Preis , 5=hoher Preis)</td>
+</tr>
+<tr>
+<td colspan="5">
+<a name="fnote1"><sup>1</sup></a> Wenn <a href="#field29"><strong>mwstsatz (29/AD)</strong></a> angegeben und <a href="#field11"><strong>mwst (11/L)</strong></a> auf Mwst ausweisbar gesetzt ist, wird die Mehrwertsteuer ausgewiesen und
+          <a href="#field10"><strong>preis (10/K)</strong></a> und <a href="#field23"><strong>haendlerpreis (23/X)</strong></a> werden als Nettopreise interpretiert, anderenfalls als Bruttopreise. <a href="#field29"><strong>mwstsatz (29/AD)</strong></a> wird nur eingelesen, wenn
+          <a href="#field11"><strong>mwst (11/L)</strong></a> auf Mwst ausweisbar gesetzt ist.
+        </td>
+</tr>
+<tr>
+<td colspan="5">
+<a name="fnote2"><sup>2</sup></a> Von den Feldern <a href="#field13"><strong>oldtimer (13/N)</strong></a>, <a href="#field20"><strong>jahreswagen (20/U)</strong></a>, <a href="#field50"><strong>vorfuehrfahrzeug (50/AY)</strong></a> und <a href="#field112"><strong>tageszulassung (112/DI)</strong></a> darf nur eins auf ja gesetzt sein.
+        </td>
+</tr>
+<tr>
+<td colspan="5">
+<a name="fnote3"><sup>3</sup></a> Es werden nur URLs in der Form youtube.com/xxx akzeptiert.
+        </td>
+</tr>
+<tr>
+<td colspan="5">
+<a name="fnote4"><sup>4</sup></a> Sie dürfen nur ein Dezimaltrennzeichen verwenden. Erlaubte Trennzeichen sind <strong>.</strong> oder <strong>,</strong> (Punkt oder Komma). Andere Eingaben (z. B. mit Tausendertrennpunkten) sind nicht möglich.
+        </td>
+</tr>
+<tr>
+<td colspan="5">
+<a name="fnote5"><sup>5</sup></a> Wenn das Feld 95/CR/envkv = 0 (or envkv-compliant for API) gilt: Bei den angegebenen Daten handelt es sich um Circa-Angaben des Angebot-Erstellers. Die Werte können Erfahrungen zu diesem Modell darstellen oder aus anderen Quellen stammen.
+        </td>
+</tr>
+<tr>
+<td colspan="5">
+<a name="fnote5"><sup>6</sup></a> Ab Feld 212 wurde die mobile.de CSV erweitert. Bis dahin ist das Format identisch mit dem mobile.de CSV-Format Stand 10/2017
+        </td>
+</tr>
+<tr>
+<td colspan="5">
+<a name="fnote5"><sup>7</sup></a> Wenn Feld 11/L Mwst mit 0 angegeben ist (MwST ausweisbar) = netto. Wenn Feld 11/ L Mwst mit 1 (Mwst nicht ausweisbar) ist der EK netto wie brutto.
+        </td>
+</tr>
+</table>
