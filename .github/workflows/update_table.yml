@@ -19,10 +19,10 @@ jobs:
       - name: Run script
         run: python main.py
       - name: Commit changes (if any)
-        uses: EndBug/add-and-commit@v7
+        uses: EndBug/add-and-commit@v9
         with:
           message: 'Update mobile_de_csv.json and current-table.html (if changed)'
           # Only commit if there are changes
-          push: ${{ github.event.inputs.push || 'auto' }}
+          push: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
