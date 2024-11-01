@@ -4408,12 +4408,5 @@
         "Name": "Mobile.de Parkungen",
         "Required": false,
         "Description": "Anzahl der Parkungen auf mobile.de"
-    },
-    {
-        "Number": 630,
-        "Column": "XG",
-        "Name": "Mobile.de Preisrating",
-        "Required": false,
-        "Description": "0-5 (0=k. Angaben, 1=sehr guter Preis , 2=guter Preis , 3=fairer Preis , 4=erh\u00f6hter Preis , 5=hoher Preis)"
     }
 ]
