@@ -2802,10 +2802,10 @@
     {
         "number": 350,
         "column": "MM",
-        "name": "",
+        "name": "Easy-Car-Sales Fahrzeug ID",
         "required": false,
-        "description": "reserviert, muss leer sein",
-        "dataType": "null"
+        "description": "Text (Feldgr\u00f6\u00dfe max. 50 Zeichen)",
+        "dataType": "string"
     },
     {
         "number": 351,
@@ -5046,5 +5046,13 @@
         "required": false,
         "description": "0-5 (0=k. Angaben, 1=sehr guter Preis , 2=guter Preis , 3=fairer Preis , 4=erh\u00f6hter Preis , 5=hoher Preis)",
         "dataType": "int"
+    },
+    {
+        "number": 631,
+        "column": "XH",
+        "name": "Anlieferungsdatum",
+        "required": false,
+        "description": "Datumsangabe (Format='tt.mm.jjjj')",
+        "dataType": "date"
     }
 ]
