@@ -5020,7 +5020,7 @@
         "column": "XD",
         "name": "Hochdach (Art)",
         "required": false,
-        "description": "'0-2' (0=keine Heckt\u00fcr, 1=Hochdach, 2=Superhochdach)",
+        "description": "'0-2' (0=kein Hochdach, 1=Hochdach, 2=Superhochdach)",
         "dataType": "int"
     },
     {
