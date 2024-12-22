@@ -5054,5 +5054,13 @@
         "required": false,
         "description": "Datumsangabe (Format='tt.mm.jjjj')",
         "dataType": "date"
+    },
+    {
+        "number": 632,
+        "column": "XI",
+        "name": "NST-Code (national sales type code)",
+        "required": false,
+        "description": "Text (m\u00f6gliche Werte: AT1, AT2, AT3, AT4)",
+        "dataType": "string"
     }
 ]
