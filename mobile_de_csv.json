@@ -5062,5 +5062,21 @@
         "required": false,
         "description": "Text (m\u00f6gliche Werte: AT1, AT2, AT3, AT4)",
         "dataType": "string"
+    },
+    {
+        "number": 633,
+        "column": "XJ",
+        "name": "Mobile.de Drucke",
+        "required": false,
+        "description": "Anzahl der Drucke auf mobile.de",
+        "dataType": "string"
+    },
+    {
+        "number": 634,
+        "column": "XK",
+        "name": "Mobile.de Anrufe",
+        "required": false,
+        "description": "Anzahl der Anrufe durch mobile.de",
+        "dataType": "string"
     }
 ]
