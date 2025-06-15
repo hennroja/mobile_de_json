@@ -5078,5 +5078,13 @@
         "required": false,
         "description": "Anzahl der Anrufe durch mobile.de",
         "dataType": "string"
+    },
+    {
+        "number": 635,
+        "column": "XL",
+        "name": "Dateinname Batteriezertifikat (PDF-Datei)",
+        "required": false,
+        "description": "Text. Zul\u00e4ssige Zeichen sind Zahlen, die Buchstaben A bis Z bzw. a bis z sowie Unterstriche. Alle anderen Zeichen, insbesondere alle anderen Sonderzeichen, Umlaute (\u00e4,\u00f6,\u00fc) und \u00df sind nicht erlaubt. (Bsp. f\u00fcr Dateinnamen: batteriezertifikat_[VIN].pdf)",
+        "dataType": "string"
     }
 ]
