@@ -5084,7 +5084,15 @@
         "column": "XL",
         "name": "Dateinname Batteriezertifikat (PDF-Datei)",
         "required": false,
-        "description": "Text. Zul\u00e4ssige Zeichen sind Zahlen, die Buchstaben A bis Z bzw. a bis z sowie Unterstriche. Alle anderen Zeichen, insbesondere alle anderen Sonderzeichen, Umlaute (\u00e4,\u00f6,\u00fc) und \u00df sind nicht erlaubt. (Bsp. f\u00fcr Dateinnamen: batteriezertifikat_[VIN].pdf)",
+        "description": "Text. Zul\u00e4ssige Zeichen sind Zahlen, die Buchstaben A bis Z bzw. a bis z sowie Unterstriche. Alle anderen Zeichen, insbesondere alle anderen Sonderzeichen, Umlaute (\u00e4,\u00f6,\u00fc) und \u00df sind nicht erlaubt. (Bsp. f\u00fcr Dateinnamen: batteriezertifikat_[VIN].pdf). Dieses Feld wird nur bef\u00fcllt, wenn die entsprechende PDF-Datei in der komprimierten \u00dcbertragung enthalten ist.",
+        "dataType": "string"
+    },
+    {
+        "number": 636,
+        "column": "XM",
+        "name": "B\u00f6rsen Anfangstext (individueller Fahrzeug-Anfangstext f\u00fcr die B\u00f6rsen)",
+        "required": false,
+        "description": "Text (max. 3000 Zeichen).",
         "dataType": "string"
     }
 ]
