@@ -5094,5 +5094,29 @@
         "required": false,
         "description": "Text (max. 3000 Zeichen).",
         "dataType": "string"
+    },
+    {
+        "number": 637,
+        "column": "XN",
+        "name": "Mindestverkaufspreis",
+        "required": false,
+        "description": "Zahl, Bruttopreis",
+        "dataType": "string"
+    },
+    {
+        "number": 638,
+        "column": "XO",
+        "name": "Auktion Startzeit",
+        "required": false,
+        "description": "Datumsangabe (Format='tt.mm.jjjjj hh:mm:ss')",
+        "dataType": "date"
+    },
+    {
+        "number": 639,
+        "column": "XP",
+        "name": "Auktion Endzeit",
+        "required": false,
+        "description": "Datumsangabe (Format='tt.mm.jjjjj hh:mm:ss')",
+        "dataType": "date"
     }
 ]
