@@ -4858,7 +4858,7 @@
     {
         "number": 607,
         "column": "WJ",
-        "name": "Batterie-Garantie",
+        "name": "Batterie-Garantie (Monate)",
         "required": false,
         "description": "Ganzzahl in Monate",
         "dataType": "int"
@@ -5084,7 +5084,7 @@
         "column": "XL",
         "name": "Dateinname Batteriezertifikat (PDF-Datei)",
         "required": false,
-        "description": "Text. Zul\u00e4ssige Zeichen sind Zahlen, die Buchstaben A bis Z bzw. a bis z sowie Unterstriche. Alle anderen Zeichen, insbesondere alle anderen Sonderzeichen, Umlaute (\u00e4,\u00f6,\u00fc) und \u00df sind nicht erlaubt. (Bsp. f\u00fcr Dateinnamen: batteriezertifikat_[VIN].pdf). Dieses Feld wird nur bef\u00fcllt, wenn die entsprechende PDF-Datei in der komprimierten \u00dcbertragung enthalten ist.",
+        "description": "Text. Zul\u00e4ssige Zeichen sind Zahlen, die Buchstaben A bis Z bzw. a bis z sowie Unterstriche. Alle anderen Zeichen, insbesondere alle anderen Sonderzeichen, Umlaute (\u00e4,\u00f6,\u00fc) und \u00df sind nicht erlaubt. (Bsp. f\u00fcr Dateinnamen: batteriezertifikat_[VIN].pdf). Wenn kein Batteriezertifikat vorhanden ist oder gel\u00f6scht werden soll, muss die Spalte leer geschickt werden",
         "dataType": "string"
     },
     {
@@ -5118,5 +5118,21 @@
         "required": false,
         "description": "Datumsangabe (Format='tt.mm.jjjjj hh:mm:ss')",
         "dataType": "date"
+    },
+    {
+        "number": 640,
+        "column": "XQ",
+        "name": "Autoscout24 Klicks",
+        "required": false,
+        "description": "Gesamtanzahl Nachfrageklicks Autoscout24",
+        "dataType": "string"
+    },
+    {
+        "number": 641,
+        "column": "XR",
+        "name": "Batterie-Garantie (Kilometer)",
+        "required": false,
+        "description": "Ganzzahl in Kilometer",
+        "dataType": "int"
     }
 ]
