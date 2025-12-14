@@ -3012,7 +3012,7 @@
         "column": "NM",
         "name": "Wartung pro Monat",
         "required": false,
-        "description": "Leasingvorschlag, Wartung pro Monat in EUR, netto",
+        "description": "Leasingvorschlag, Wartung pro Monat in EUR",
         "dataType": "string"
     },
     {
@@ -3020,7 +3020,7 @@
         "column": "NN",
         "name": "Verschlei\u00df pro Monat",
         "required": false,
-        "description": "Leasingvorschlag, Verschlei\u00df pro Monat in EUR, netto",
+        "description": "Leasingvorschlag, Verschlei\u00df pro Monat in EUR",
         "dataType": "string"
     },
     {
@@ -3068,7 +3068,7 @@
         "column": "NT",
         "name": "KFZ-Lieferung einmalig",
         "required": false,
-        "description": "Leasingvorschlag, Lieferkosten in EUR, netto",
+        "description": "Leasingvorschlag, Lieferkosten in EUR",
         "dataType": "string"
     },
     {
@@ -3108,7 +3108,7 @@
         "column": "NY",
         "name": "Zulassungskosten einmalig",
         "required": false,
-        "description": "Leasingvorschlag, Zulassungskosten in EUR, netto",
+        "description": "Leasingvorschlag, Zulassungskosten in EUR",
         "dataType": "string"
     },
     {
